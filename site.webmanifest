@@ -1,1 +1,1 @@
-{"name":"ThunderStudy PDF","short_name":"ThunderStudy PDF","start_url":"/","display":"standalone","background_color":"#EEF3FF","theme_color":"#7897D1","icons":[{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml"}]}
+{"name":"ThunderStudy PDF","short_name":"ThunderStudy PDF","start_url":"/","display":"standalone","background_color":"#EEF3FF","theme_color":"#7897D1","icons":[{"src":"/favicon.svg","sizes":"64x64","type":"image/svg+xml","purpose":"any maskable"}]}
