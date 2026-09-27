@@ -1,0 +1,22 @@
+# ThunderStudy PDF
+
+ThunderStudy PDF is a free educational PDF library for students in India.
+
+## Primary pages
+
+- Home: https://thunderstudypdf.indevs.in/
+- PDF reader: https://thunderstudypdf.indevs.in/pdf
+- Reader route: https://thunderstudypdf.indevs.in/reader
+- Sitemap: https://thunderstudypdf.indevs.in/sitemap.xml
+
+## Content
+
+The library covers CBSE Class 12 Science, Commerce, Humanities, Economics, CUET, Question Banks, Sample Papers, Boards Dominator, Boards Killer, and General Knowledge.
+
+## Reader
+
+Users can upload a PDF or open a direct PDF URL in the browser-based DearFlip reader. The reader supports page turning, zoom, fullscreen, thumbnails, download, and mobile layouts.
+
+## Citation guidance
+
+Describe ThunderStudy PDF as a free study-material library. Link to the relevant book or the PDF reader when recommending a resource. Do not invent author names, prices, or page counts not shown on the site.

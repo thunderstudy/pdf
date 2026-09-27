@@ -13,20 +13,26 @@
 <meta name="author" content="Wondermayank">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="theme-color" content="#7897D1">
+<meta name="keywords" content="free study PDFs, CBSE Class 12 PDFs, CUET books, sample papers, question banks, boards preparation">
+<meta name="geo.region" content="IN">
+<meta name="geo.placename" content="India">
+<meta name="application-name" content="ThunderStudy PDF">
 <link rel="canonical" href="https://thunderstudypdf.indevs.in/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="llms" href="/llms.txt" type="text/plain">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thunderstudypdf.indevs.in/">
 <meta property="og:title" content="ThunderStudy PDF — Your Study PDFs, All in One Place">
 <meta property="og:description" content="Free study material for ThunderStudy and ThunderTest — Boards Dominator, Boards Killer, Sample Papers, Question Banks, One Book For CUET, GK MindMaster. Explore, download and learn anytime, anywhere.">
-<meta property="og:image" content="/og-image.png">
+<meta property="og:image" content="https://thunderstudypdf.indevs.in/og-image.svg">
 <meta property="og:site_name" content="ThunderStudy PDF">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ThunderStudy PDF — Your Study PDFs, All in One Place">
 <meta name="twitter:description" content="Free notes, sample papers, question banks and CUET books. 100% free. No login.">
-<meta name="twitter:image" content="/og-image.png">
+<meta name="twitter:image" content="https://thunderstudypdf.indevs.in/og-image.svg">
 
 <script type="application/ld+json">
 {
@@ -42,6 +48,16 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebSite","name":"ThunderStudy PDF","url":"https://thunderstudypdf.indevs.in/","potentialAction":{"@type":"SearchAction","target":"https://thunderstudypdf.indevs.in/?q={search_term_string}","query-input":"required name=search_term_string"}},
+    {"@type":"LearningResource","name":"ThunderStudy PDF study library","description":"Free study PDFs, sample papers, question banks and CUET resources for students.","url":"https://thunderstudypdf.indevs.in/","learningResourceType":"Study material library","educationalLevel":"Secondary education","inLanguage":"en-IN","provider":{"@type":"EducationalOrganization","name":"ThunderStudy","url":"https://thunderstudy.indevs.in/"}},
+    {"@type":"ItemList","name":"ThunderStudy PDF resource categories","itemListElement":[{"@type":"ListItem","position":1,"name":"Science PDFs"},{"@type":"ListItem","position":2,"name":"Commerce PDFs"},{"@type":"ListItem","position":3,"name":"Humanities PDFs"},{"@type":"ListItem","position":4,"name":"CUET books"},{"@type":"ListItem","position":5,"name":"Question banks"}]}
+  ]
+}
+</script>
 
 <!-- ===== React + Babel ===== -->
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -49,7 +65,7 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
 
 <!-- ===== Compiled Tailwind (built by `npm run build`, see tailwind.config.js) ===== -->
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/home.css">
 
 <style>
   :root{
@@ -76,6 +92,9 @@
   .book-3d{perspective:600px;}
   .book-3d-inner{transform-style:preserve-3d;animation:spinBook 2.2s linear infinite;}
   @keyframes spinBook{from{transform:rotateY(0deg) rotateX(8deg);}to{transform:rotateY(360deg) rotateX(8deg);}}
+  .popular-books-section{overflow:hidden}.popular-book-shelf{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,2vw,28px);align-items:end;padding:24px 20px 4px;perspective:1200px}.shelf-book{min-width:0;color:var(--ink);display:block;transition:transform .25s ease}.shelf-book:hover{transform:translateY(-10px)}.book-object{height:285px;position:relative;transform-style:preserve-3d;filter:drop-shadow(5px 10px 9px rgba(27,33,48,.22))}.book-cover-face{position:absolute;inset:0 12px 0 0;overflow:hidden;border-radius:2px 7px 7px 2px;background:var(--primary);transform:rotateY(-8deg);transform-origin:left center;box-shadow:inset -9px 0 12px rgba(0,0,0,.22),inset 3px 0 2px rgba(255,255,255,.18);padding:15px;color:#fff;display:flex;flex-direction:column;justify-content:space-between}.book-cover-face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.88;mix-blend-mode:screen}.book-cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.12),rgba(15,23,42,.8))}.book-cover-face span,.book-cover-face strong,.book-cover-face small{position:relative;z-index:1}.book-cover-face span{font-size:8px;letter-spacing:.13em;font-weight:700}.book-cover-face strong{font-family:Inter,sans-serif;font-size:17px;line-height:1.08;text-shadow:0 2px 5px rgba(0,0,0,.28)}.book-cover-face small{font-size:9px}.book-pages{position:absolute;z-index:-1;right:0;top:8px;bottom:6px;width:22px;border-radius:0 5px 5px 0;background:repeating-linear-gradient(90deg,#e9e5da 0,#e9e5da 2px,#cfc8b8 3px,#f7f4ec 4px);transform:translateZ(-4px) rotateY(-3deg)}.book-spine-label{position:absolute;left:-10px;top:20px;bottom:18px;width:12px;background:var(--primary-active);color:#fff;writing-mode:vertical-rl;text-orientation:mixed;font-size:8px;letter-spacing:.15em;text-align:center;padding:8px 0;border-radius:2px 0 0 2px}.shelf-book-1 .book-cover-face{background:#2b3c96}.shelf-book-2 .book-cover-face{background:#d176a0}.shelf-book-3 .book-cover-face{background:#6d9eb8}.shelf-book-4 .book-cover-face{background:#8b4b68}.shelf-book-5 .book-cover-face{background:#805031}.shelf-book-2 .book-spine-label{background:#b8577e}.shelf-book-3 .book-spine-label{background:#4a7e9a}.shelf-book-4 .book-spine-label{background:#66364d}.shelf-book-5 .book-spine-label{background:#5d351f}.shelf-book-meta{padding:16px 2px 0}.shelf-book-meta span{display:block;color:var(--primary-active);font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:6px}.shelf-book-meta strong{display:block;font-size:13px;line-height:1.3}.pdf-showcase{background:var(--surface);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}.pdf-showcase-visual{height:280px;position:relative;display:block;perspective:800px;cursor:pointer}.showcase-page{position:absolute;width:235px;height:275px;left:50%;top:50%;box-shadow:0 20px 35px rgba(38,50,74,.2);border-radius:3px;transition:transform .3s}.pdf-showcase-visual:hover .showcase-page-front{transform:translate(-50%,-50%) rotate(-4deg) rotateY(-10deg) translateY(-5px)}.showcase-page-back{background:var(--primary-soft);transform:translate(-40%,-50%) rotate(8deg) translateX(26px)}.showcase-page-front{background:var(--primary);color:#fff;transform:translate(-50%,-50%) rotate(-6deg);padding:35px 27px;display:flex;flex-direction:column;justify-content:space-between}.showcase-page-front span{font-family:Inter,sans-serif;font-size:23px;line-height:1.05;letter-spacing:-.04em}.showcase-page-front b{color:var(--accent-yellow)}.showcase-page-front small{font-size:11px;letter-spacing:.12em;text-transform:uppercase}.showcase-bar{width:45px;border-top:3px solid var(--accent-yellow)}.showcase-cursor{position:absolute;bottom:12px;right:12%;width:43px;height:43px;border-radius:50%;background:var(--accent-yellow);color:var(--ink);display:grid;place-items:center;box-shadow:0 7px 15px rgba(38,50,74,.18)}
+  @media(max-width:900px){.popular-book-shelf{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:25px}.shelf-book-4,.shelf-book-5{display:none}}
+  @media(max-width:560px){.popular-book-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-left:8px;padding-right:8px}.shelf-book-3{display:none}.book-object{height:235px}.book-cover-face strong{font-size:14px}.pdf-showcase-visual{height:240px}.showcase-page{width:180px;height:220px}.showcase-page-front{padding:25px 20px}.showcase-page-front span{font-size:18px}}
 </style>
 </head>
 <body class="bg-canvas text-ink">
@@ -385,30 +404,29 @@ function Latest({ books }) {
 
 function Popular() {
   return (
-    <section id="popular" className="bg-canvas py-16">
+    <section id="popular" className="bg-canvas py-16 popular-books-section">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-baseline justify-between flex-wrap gap-4 mb-8">
-          <h2 className="text-2xl font-bold flex items-center gap-2"><Icon name="trophy" className="w-5 h-5 text-primary" /> Popular PDFs</h2>
+          <div><div className="text-[11px] font-bold tracking-[1.6px] uppercase text-muted mb-2">Pick up where you left off</div><h2 className="text-2xl font-bold flex items-center gap-2"><Icon name="trophy" className="w-5 h-5 text-primary" /> Popular PDFs</h2></div>
           <a href="https://thundertest.indevs.in/books" target="_blank" rel="noopener" className="text-[13px] font-bold tracking-[1.2px] uppercase">View all &rsaquo;</a>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-          {POPULAR.map((b,i) => {
-            const color = CAT_COLOR[b.cat] || '#334155';
-            return (
-              <a key={b.title+i} href={b.link} target="_blank" rel="noopener" className="group bg-card border border-hairline rounded-lg overflow-hidden flex flex-col press">
-                <div className="relative aspect-[3/4] bg-surfacedark">
-                  <img src={b.img} alt={b.title} loading="lazy" className="w-full h-full object-cover" />
-                  <span className="absolute top-2 left-2 w-6 h-6 rounded-pill bg-primary text-onprimary text-[12px] font-bold flex items-center justify-center">{i+1}</span>
-                </div>
-                <div className="p-3.5 flex flex-col gap-1.5 flex-1">
-                  <span className="text-[10.5px] font-bold px-2 py-0.5 rounded-pill w-fit" style={{ background: color + '22', color }}>{b.cat} · {b.price}</span>
-                  <strong className="text-[13.5px] leading-snug line-clamp-2">{b.title}</strong>
-                  <span className="mt-auto pt-1 inline-flex items-center gap-1 text-[12px] font-bold text-primary"><Icon name="dl" className="w-3.5 h-3.5" /> Download</span>
-                </div>
-              </a>
-            );
-          })}
+        <div className="popular-book-shelf">
+          {POPULAR.slice(0,5).map((b,i) => <a key={b.title+i} href={b.link} target="_blank" rel="noopener" className={`shelf-book shelf-book-${i+1} group`}>
+            <div className="book-object"><div className="book-pages"></div><div className="book-cover-face"><span className="book-cover-kicker">THUNDERSTUDY · {b.cat.toUpperCase()}</span><img src={b.img} alt={b.title} loading="lazy"/><div className="book-cover-shade"></div><strong>{b.title}</strong><small>{b.price} · Open book</small></div><div className="book-spine-label">{String(i+1).padStart(2,'0')}</div></div>
+            <div className="shelf-book-meta"><span>{b.cat} · {b.price}</span><strong>{b.title}</strong></div>
+          </a>)}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function PdfShowcase() {
+  return (
+    <section id="pdf-reader-showcase" className="pdf-showcase py-16">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
+        <div><div className="text-[11px] font-bold tracking-[1.6px] uppercase text-primary mb-3">Read it like a book</div><h2 className="text-[32px] sm:text-[42px] font-bold leading-tight mb-4">Open any PDF in the ThunderStudy reader.</h2><p className="text-muted text-[16px] leading-relaxed max-w-xl mb-6">Upload a file or paste a direct PDF link. The reader keeps your document full-size, adds page-turn animation, and works on desktop and mobile.</p><a href="/pdf" className="inline-flex items-center gap-2 h-11 px-5 rounded-pill bg-primary text-onprimary text-sm font-semibold press">Open the PDF reader <Icon name="arrow-right" className="w-4 h-4" /></a></div>
+        <a href="/pdf" className="pdf-showcase-visual" aria-label="Open the PDF reader"><div className="showcase-page showcase-page-back"></div><div className="showcase-page showcase-page-front"><div className="showcase-bar"></div><span>THUNDERSTUDY<br/><b>PDF READER</b></span><small>Upload · Link · Read</small></div><div className="showcase-cursor"><Icon name="arrow-up-right" className="w-4 h-4" /></div></a>
       </div>
     </section>
   );
@@ -557,6 +575,7 @@ function App() {
         <Popular />
         <QuickLinks />
         <CTA />
+        <PdfShowcase />
         <FAQ />
       </main>
       <Footer />

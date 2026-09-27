@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./styles.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./home.css --minify",
+    "start": "node server.mjs"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.13"
