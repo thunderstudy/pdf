@@ -1,6 +1,21 @@
+function normalizeDrive(raw) {
+  if (!raw) return raw;
+  try {
+    const u = new URL(raw);
+    if (!/(^|\.)(drive|docs)\.google\.com$|(^|\.)drive\.usercontent\.google\.com$/i.test(u.hostname)) return raw;
+    const m = u.pathname.match(/\/d\/([\w-]{10,})/);
+    const id = m ? m[1] : u.searchParams.get('id');
+    return id && /^[\w-]{10,}$/.test(id)
+      ? `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=t`
+      : raw;
+  } catch {
+    return raw;
+  }
+}
+
 export async function onRequest({ request }) {
   const requestUrl = new URL(request.url);
-  const target = requestUrl.searchParams.get('url');
+  const target = normalizeDrive(requestUrl.searchParams.get('url'));
   const cors = { 'Access-Control-Allow-Origin': '*' };
 
   if (!target) {
@@ -36,7 +51,8 @@ export async function onRequest({ request }) {
 
     const contentType = upstream.headers.get('content-type') || '';
     if (contentType.includes('text/html')) {
-      return new Response('The link returned a webpage, not a PDF file.', {
+      const fromDrive = /(^|\.)google\.com$/i.test(targetUrl.hostname);
+      return new Response(fromDrive ? 'Google Drive did not return a PDF. Set sharing to "Anyone with the link" and try again.' : 'The link returned a webpage, not a PDF file.', {
         status: 415,
         headers: cors
       });
