@@ -1,0 +1,13 @@
+# ThunderStudy PDF
+
+> Free study PDFs and a browser flipbook reader for students.
+
+## Pages
+
+- [Home](https://thunderstudypdf.indevs.in/): searchable PDF library and categories.
+- [Open a PDF](https://thunderstudypdf.indevs.in/pdf): upload a PDF or paste a direct PDF link.
+- [Reader](https://thunderstudypdf.indevs.in/reader): interactive DearFlip PDF reader.
+
+## Topics
+
+Science, Commerce, Humanities, Economics, CUET, General Knowledge, sample papers, question banks, boards preparation.

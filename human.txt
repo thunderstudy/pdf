@@ -1,0 +1,12 @@
+/* TEAM */
+Site: ThunderStudy PDF
+Purpose: Free educational PDF library and browser flipbook reader
+Contact: https://thunderstudy.indevs.in/
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript, PDF.js, DearFlip Lite
+Language: English (India)
+Last update: 2026-09-27
+
+/* LICENSE */
+DearFlip Lite assets are included under their original CC BY-NC-ND 4.0 license.
