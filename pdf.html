@@ -517,6 +517,24 @@ html.theme-swap *{transition:none!important}
 .link-row{display:flex;gap:14px;align-items:center}
 .link-row .input-wrap{flex:1;min-width:0}
 @media(max-width:640px){.link-row{flex-wrap:wrap}.link-row .btn{flex:1 1 100%}}
+.recent{margin-top:18px;padding-top:18px;border-top:1px solid var(--hairline)}
+.recent-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.recent-clear{border:0;background:transparent;color:var(--primary);font:700 13px var(--font);cursor:pointer;padding:6px 10px;border-radius:var(--radius-pill)}
+.recent-clear:hover{background:var(--primary-soft)}
+.recent-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.recent-item{display:flex;align-items:center;gap:6px;border-radius:var(--radius-md);background:var(--surface);box-shadow:4px 4px 12px var(--clay-dark),-4px -4px 12px var(--clay-light);transition:transform .2s ease}
+.recent-item:hover{transform:translateY(-2px)}
+.recent-open{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:12px 6px 12px 14px;color:inherit;text-align:left}
+.recent-ico{flex-shrink:0;width:40px;height:40px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--primary-soft);color:var(--primary)}
+.recent-ico svg{width:20px;height:20px}
+.recent-txt{min-width:0;display:flex;flex-direction:column;gap:2px}
+.recent-title{font-size:14.5px;font-weight:700;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.recent-sub{font-size:12.5px;color:var(--muted);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.recent-badge{flex-shrink:0;font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--success);background:color-mix(in srgb,var(--success) 14%,transparent);padding:4px 9px;border-radius:var(--radius-pill)}
+.recent-del{flex-shrink:0;width:34px;height:34px;margin-right:8px;border:0;border-radius:50%;background:transparent;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.recent-del:hover{background:var(--primary-soft);color:var(--primary)}
+.recent-del svg{width:16px;height:16px}
+[data-install][hidden],.recent[hidden]{display:none!important}
 .try-row{display:flex;align-items:center;justify-content:center;gap:12px 16px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--hairline)}
 .try-text{font-size:13.5px;color:var(--muted);font-weight:600}
 .start-foot{display:flex;justify-content:center;margin-top:26px}
@@ -551,7 +569,7 @@ html.theme-swap *{transition:none!important}
 <div class="wrap">
 <span class="hero-badge"><span class="hero-dot"></span> Open your next chapter</span>
 <h1>Bring a PDF<br><span class="accent">to life.</span></h1>
-<p class="hero-sub">Upload a file from your device or paste a PDF or Google Drive link. We'll turn it into a full-size two-page flipbook.</p>
+<p class="hero-sub">Upload a file from your device or paste a PDF, Drive, Dropbox or OneDrive link. We'll turn it into a full-size two-page flipbook.</p>
 <section class="panel pdf-panel" aria-label="Open a PDF">
 <label class="file-drop" for="pdf-file" id="drop">
 <span class="fd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
@@ -563,16 +581,20 @@ html.theme-swap *{transition:none!important}
 </label>
 <div class="or-divider">or</div>
 <form id="link-form" class="url-form" novalidate>
-<label class="field-label" for="pdf-link">Paste a PDF or Google Drive link</label>
+<label class="field-label" for="pdf-link">Paste a PDF or share link</label>
 <div class="link-row">
-<div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><input id="pdf-link" class="text-input shadowed" type="url" placeholder="Paste a PDF or Google Drive link" autocomplete="url"></div>
+<div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><input id="pdf-link" class="text-input shadowed" type="url" placeholder="PDF, Drive, Dropbox, OneDrive or GitHub link" autocomplete="url"></div>
 <button class="btn btn-primary" type="submit" aria-label="Open PDF">Open PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
 </div>
 </form>
-<p class="hint" id="start-hint" role="status">Your document stays in this browser tab while you read. Drive files must be shared as &ldquo;Anyone with the link&rdquo;.</p>
+<p class="hint" id="start-hint" role="status">Your document stays in this browser tab while you read. Cloud files must be shared as &ldquo;Anyone with the link&rdquo;.</p>
 <div class="try-row">
 <span class="try-text">No PDF handy? See how the reader feels.</span>
-<a class="btn btn-soft btn-sm" id="try-pdf" href="/reader?link=%2Fassets%2Fsample.pdf&amp;title=The%20Complete%20Static%20GK%20Capsule" aria-label="Try a sample PDF in the reader"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Try a sample PDF</a>
+<a class="btn btn-soft btn-sm" id="try-pdf" href="/reader?link=%2Fassets%2Fsample.pdf&amp;title=The%20Complete%20Static%20GK%20Capsule" aria-label="Try a sample PDF in the reader"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Try a sample PDF</a><button type="button" class="btn btn-outline btn-sm" data-install hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg> Install app</button>
+</div>
+<div class="recent" id="recent" hidden>
+<div class="recent-head"><span class="field-label" style="margin:0">Recent links</span><button type="button" class="recent-clear" id="recent-clear">Clear</button></div>
+<ul class="recent-list" id="recent-list"></ul>
 </div>
 </section>
 <div class="start-foot"><a class="btn btn-outline" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg> Back to library</a></div>
@@ -746,7 +768,8 @@ html.theme-swap *{transition:none!important}
 })();
 </script>
 <script type="module">
-import{normalizePdfUrl,isDriveLink,isDriveFolder}from'/js/pdf-link.js';
+import{normalizePdfUrl,isFolderLink,providerOf,PROVIDER_NAMES,titleFromUrl}from'/js/pdf-link.js';
+import{getRecents,removeRecent,clearRecents}from'/js/recent.js';
 const file=document.querySelector('#pdf-file'),form=document.querySelector('#link-form'),link=document.querySelector('#pdf-link'),hint=document.querySelector('#start-hint'),drop=document.querySelector('#drop');
 const dbRequest=indexedDB.open('thunderstudy-reader',1);dbRequest.onupgradeneeded=()=>dbRequest.result.createObjectStore('documents');
 function putFile(blob,title){return new Promise((resolve,reject)=>{const request=indexedDB.open('thunderstudy-reader',1);request.onsuccess=()=>{const tx=request.result.transaction('documents','readwrite');tx.objectStore('documents').put({blob,title},'active');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)}})}
@@ -757,8 +780,19 @@ file.addEventListener('change',e=>handleFile(e.target.files[0]));
 ['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('dragover')}));
 ['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('dragover')}));
 drop.addEventListener('drop',e=>handleFile(e.dataTransfer&&e.dataTransfer.files[0]));
-form.addEventListener('submit',event=>{event.preventDefault();let url;try{url=new URL(link.value.trim());if(!/^https?:$/.test(url.protocol))throw new Error()}catch{setHint('Enter a valid PDF or Google Drive URL, including https://','err');link.focus();return}if(isDriveFolder(url.href)){setHint('That is a Drive folder. Open the PDF file and paste its share link instead.','err');link.focus();return}const drive=isDriveLink(url.href);if(drive&&normalizePdfUrl(url.href)===url.href){setHint('Could not read a file ID from that Drive link. Copy the share link of the PDF file.','err');link.focus();return}const title=drive?'Google Drive PDF':'Linked PDF';sessionStorage.setItem('ts-pdf-source',url.href);sessionStorage.setItem('ts-pdf-title',title);openReader(url.href,title)});
-const params=new URLSearchParams(location.search);if(params.get('link'))openReader(params.get('link'),params.get('title')||(isDriveLink(params.get('link'))?'Google Drive PDF':'Linked PDF'));
+form.addEventListener('submit',event=>{event.preventDefault();let url;try{url=new URL(link.value.trim());if(!/^https?:$/.test(url.protocol))throw new Error()}catch{setHint('Enter a valid link, including https://','err');link.focus();return}const p=providerOf(url.href);if(isFolderLink(url.href)){setHint(`That is a ${p?PROVIDER_NAMES[p]+' ':''}folder. Open the PDF file and paste its share link instead.`,'err');link.focus();return}if(p==='drive'&&normalizePdfUrl(url.href)===url.href){setHint('Could not read a file ID from that Drive link. Copy the share link of the PDF file.','err');link.focus();return}const title=titleFromUrl(url.href);sessionStorage.setItem('ts-pdf-source',url.href);sessionStorage.setItem('ts-pdf-title',title);openReader(url.href,title)});
+async function isOffline(url){try{if(!('caches' in window))return false;const c=await caches.open('ts-pdf-files-v1');return !!await c.match(`/api/pdf?url=${encodeURIComponent(new URL(normalizePdfUrl(url)).href)}`)}catch{return false}}
+const recentBox=document.querySelector('#recent'),recentList=document.querySelector('#recent-list');
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function renderRecents(){const items=getRecents();recentBox.hidden=!items.length;if(!items.length){recentList.innerHTML='';return}
+const offline=await Promise.all(items.map(r=>isOffline(r.url)));
+recentList.innerHTML=items.map((r,i)=>{let host='';try{host=new URL(r.url).hostname.replace(/^www\./,'')}catch{}const p=providerOf(r.url);const q=new URLSearchParams({link:r.url,title:r.title});
+return `<li class="recent-item"><a class="recent-open" href="/reader?${esc(q.toString())}" data-url="${esc(r.url)}"><span class="recent-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><span class="recent-txt"><span class="recent-title">${esc(r.title)}</span><span class="recent-sub">${esc(p?PROVIDER_NAMES[p]:host)}</span></span></a>${offline[i]?'<span class="recent-badge" title="Saved for offline reading">Offline</span>':''}<button type="button" class="recent-del" data-url="${esc(r.url)}" aria-label="Remove ${esc(r.title)} from recent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></li>`}).join('')}
+recentList.addEventListener('click',e=>{const d=e.target.closest('.recent-del');if(!d)return;removeRecent(d.dataset.url);renderRecents()});
+document.querySelector('#recent-clear').addEventListener('click',()=>{clearRecents();renderRecents()});
+renderRecents();window.addEventListener('pageshow',renderRecents);
+const params=new URLSearchParams(location.search);if(params.get('link'))openReader(params.get('link'),params.get('title')||titleFromUrl(params.get('link')));
 </script>
+<script src="/js/pwa.js" defer></script>
 </body>
 </html>
