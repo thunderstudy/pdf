@@ -1,28 +1,55 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <meta name="theme-color" content="#202a29" />
-  <title>ThunderStudy Reader</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
-  <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
-  <link rel="manifest" href="/site.webmanifest?v=2" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="dflip/css/dflip.min.css" />
-  <link rel="stylesheet" href="dflip/css/themify-icons.min.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script>
+/* Theme is only ever 'light' (blue) or 'dark' (purple). It comes from the saved choice, never from the system setting. */
+(function(){var t='light';try{var s=localStorage.getItem('theme');if(s==='dark'||s==='light')t=s;}catch(e){}
+document.documentElement.setAttribute('data-theme',t);
+var m=document.getElementById('metaTheme');if(m)m.setAttribute('content',t==='dark'?'#9A7AFB':'#573AFC');})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+<title>ThunderStudy Reader | ThunderStudy PDF</title>
+<meta name="description" content="Read your PDF as a two-page flipbook.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" id="metaTheme" content="#573AFC">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+<link rel="apple-touch-icon" href="/favicon.svg?v=3">
+<link rel="manifest" href="/site.webmanifest?v=3">
+<link rel="stylesheet" href="/thunder-ui.css">
+<link rel="stylesheet" href="/app.css">
+<link rel="stylesheet" href="dflip/css/dflip.min.css">
+<link rel="stylesheet" href="dflip/css/themify-icons.min.css">
 </head>
 <body class="reader-page dearflip-reader-page">
-  <header class="reader-header">
-    <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg?v=2" alt="ThunderStudy PDF" /></span><span>ThunderStudy <em>PDF</em></span></a>
-    <span class="reader-title" id="reader-title">Loading your book</span>
-    <div class="reader-actions"><button class="icon-button" id="reader-theme" title="Toggle theme"><i data-lucide="sun"></i></button><a class="icon-button" href="/pdf.html" title="Open another PDF"><i data-lucide="upload"></i></a><a class="icon-button" href="/" title="Close reader"><i data-lucide="x"></i></a></div>
-  </header>
-  <main class="dearflip-stage"><div class="dearflip-loading" id="reader-loading"><span class="spinner"></span><span>Preparing your book…</span></div><div class="_df_book dearflip-book" id="book_pdf" webgl="true"></div></main>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="dflip/js/libs/jquery.min.js"></script>
-  <script type="module" src="js/dearflip-reader.js"></script>
+<header class="nav">
+<div class="wrap">
+<a aria-label="ThunderStudy PDF home" class="brand" href="/">
+<span class="brand-mark"><img alt="" height="32" src="/favicon.svg?v=3" width="32"></span>
+<span class="brand-text"><span class="brand-name">Thunder<span class="brand-accent">Study PDF</span></span><span class="brand-by">by wondermayank</span></span>
+</a>
+<span class="reader-title" id="reader-title">Loading your book</span>
+<div class="nav-right">
+<a aria-label="Open another PDF" class="nav-request" href="/pdf.html" title="Open another PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="17" height="17"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></a>
+<button aria-label="Toggle dark mode" class="theme-btn" id="themeBtn" type="button">
+<svg fill="none" id="themeIconSun" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4"></path><path d="M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7"></path><path d="M2.5 12h2.4M19.1 12h2.4"></path><path d="M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"></path></svg>
+<svg fill="none" id="themeIconMoon" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"></path></svg>
+</button>
+<a aria-label="Close reader" class="nav-request" href="/" title="Close reader"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M18 6 6 18M6 6l12 12"/></svg></a>
+</div>
+</div>
+</header>
+<div id="loader" aria-hidden="true"><div class="loader-blob"></div></div>
+<main class="dearflip-stage">
+  <div class="dearflip-loading" id="reader-loading"><span class="spinner"></span><span>Preparing your book…</span></div>
+  <div class="_df_book dearflip-book" id="book_pdf" webgl="true"></div>
+</main>
+<script src="dflip/js/libs/jquery.min.js"></script>
+<script src="/thunder-ui.js"></script>
+<script src="/js/pdf-tools.js"></script>
+<script src="/js/dearflip-reader.js"></script>
 </body>
 </html>

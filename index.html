@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en-IN" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script>
+/* Theme is only ever 'light' (blue) or 'dark' (purple). It comes from the saved choice, never from the system setting. */
+(function(){var t='light';try{var s=localStorage.getItem('theme');if(s==='dark'||s==='light')t=s;}catch(e){}
+document.documentElement.setAttribute('data-theme',t);
+var m=document.getElementById('metaTheme');if(m)m.setAttribute('content',t==='dark'?'#9A7AFB':'#573AFC');})();
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +18,7 @@
 <meta name="description" content="ThunderStudy PDF is the free PDF library behind ThunderStudy and ThunderTest — Boards Dominator, Boards Killer, Sample Papers, Question Banks, One Book For CUET and GK MindMaster. 100% free downloads, no login.">
 <meta name="author" content="Wondermayank">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-<meta name="theme-color" content="#7897D1">
+<meta name="theme-color" id="metaTheme" content="#573AFC">
 <meta name="keywords" content="free study PDFs, CBSE Class 12 PDFs, CUET books, sample papers, question banks, boards preparation">
 <meta name="geo.region" content="IN">
 <meta name="geo.placename" content="India">
@@ -27,12 +33,16 @@
 <meta property="og:url" content="https://thunderstudypdf.indevs.in/">
 <meta property="og:title" content="ThunderStudy PDF — Your Study PDFs, All in One Place">
 <meta property="og:description" content="Free study material for ThunderStudy and ThunderTest — Boards Dominator, Boards Killer, Sample Papers, Question Banks, One Book For CUET, GK MindMaster. Explore, download and learn anytime, anywhere.">
-<meta property="og:image" content="https://thunderstudypdf.indevs.in/og-image.svg">
+<meta property="og:image" content="https://thunderstudypdf.indevs.in/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ThunderStudy PDF: your study PDFs, all in one place">
 <meta property="og:site_name" content="ThunderStudy PDF">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ThunderStudy PDF — Your Study PDFs, All in One Place">
 <meta name="twitter:description" content="Free notes, sample papers, question banks and CUET books. 100% free. No login.">
-<meta name="twitter:image" content="https://thunderstudypdf.indevs.in/og-image.svg">
+<meta name="twitter:image" content="https://thunderstudypdf.indevs.in/og-image.png">
+<meta name="twitter:image:alt" content="ThunderStudy PDF: your study PDFs, all in one place">
 
 <script type="application/ld+json">
 {
@@ -41,7 +51,7 @@
     { "@type": "WebSite", "@id": "https://thunderstudypdf.indevs.in/#site", "name": "ThunderStudy PDF", "url": "https://thunderstudypdf.indevs.in/", "inLanguage": "en-IN", "publisher": { "@id": "https://thunderstudy.indevs.in/#org" } },
     { "@type": "EducationalOrganization", "@id": "https://thunderstudy.indevs.in/#org", "name": "ThunderStudy", "url": "https://thunderstudy.indevs.in", "sameAs": ["https://thundertest.indevs.in", "https://wondermayank.in"] },
     { "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "Is ThunderStudy PDF really free?", "acceptedAnswer": { "@type": "Answer", "text": "Most PDFs — Boards Dominator, Boards Killer, Sample Papers, Question Banks and GK MindMaster — are 100% free. A few CUET domain books are priced at \u20b999." } },
+      { "@type": "Question", "name": "Is ThunderStudy PDF really free?", "acceptedAnswer": { "@type": "Answer", "text": "Most PDFs — Boards Dominator, Boards Killer, Sample Papers, Question Banks and GK MindMaster — are 100% free. A few CUET domain books are priced at ₹99." } },
       { "@type": "Question", "name": "Which subjects does ThunderStudy PDF cover?", "acceptedAnswer": { "@type": "Answer", "text": "CBSE Class 12 Science, Commerce and Humanities, Economics, Question Banks and CUET domain subjects, plus General Knowledge for all competitive exams." } },
       { "@type": "Question", "name": "How is ThunderStudy PDF different from ThunderStudy and ThunderTest?", "acceptedAnswer": { "@type": "Answer", "text": "ThunderStudy is the study platform and ThunderTest is the mock-test platform. ThunderStudy PDF is the shared PDF library both link out to for books and notes." } }
     ] }
@@ -59,117 +69,590 @@
 }
 </script>
 
-<!-- ===== React + Babel ===== -->
-<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Free CBSE Class 12 and CUET PDFs", "url": "https://thunderstudypdf.indevs.in/", "mainEntity": {"@type": "ItemList", "numberOfItems": 30, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CBSE Class 12 Physics — Boards Dominator", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-physics-boards-dominator.pdf&title=CBSE%20Class%2012%20Physics%20%E2%80%94%20Boards%20Dominator", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-physics-boards-dominator.webp"}, {"@type": "ListItem", "position": 2, "name": "CBSE Class 12 Chemistry — Boards Dominator", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-chemistry-boards-dominator.pdf&title=CBSE%20Class%2012%20Chemistry%20%E2%80%94%20Boards%20Dominator", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-chemistry-boards-dominator.webp"}, {"@type": "ListItem", "position": 3, "name": "CBSE Class 12 Biology — Boards Dominator", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-biology-boards-dominator.pdf&title=CBSE%20Class%2012%20Biology%20%E2%80%94%20Boards%20Dominator", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-biology-boards-dominator.webp"}, {"@type": "ListItem", "position": 4, "name": "CBSE Class 12 Maths — Boards Dominator", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-maths-boards-dominator.pdf&title=CBSE%20Class%2012%20Maths%20%E2%80%94%20Boards%20Dominator", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-maths-boards-dominator.webp"}, {"@type": "ListItem", "position": 5, "name": "CBSE Class 12 Physical Education — Boards Dominator", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-physical-education-boards-dominator.pdf&title=CBSE%20Class%2012%20Physical%20Education%20%E2%80%94%20Boards%20Dominator", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-physical-education-boards-dominator.webp"}, {"@type": "ListItem", "position": 6, "name": "CBSE Class 12 Business Studies — 20+ Sample Papers", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-business-studies-sample-papers.pdf&title=CBSE%20Class%2012%20Business%20Studies%20%E2%80%94%2020%2B%20Sample%20Papers", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-business-studies-sample-papers.webp"}, {"@type": "ListItem", "position": 7, "name": "CBSE Class 12 Economics — 20+ Sample Papers", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-economics-sample-papers.pdf&title=CBSE%20Class%2012%20Economics%20%E2%80%94%2020%2B%20Sample%20Papers", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-economics-sample-papers.webp"}, {"@type": "ListItem", "position": 8, "name": "CBSE Class 12 Accountancy — 20+ Sample Papers", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-accountancy-sample-papers.pdf&title=CBSE%20Class%2012%20Accountancy%20%E2%80%94%2020%2B%20Sample%20Papers", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-accountancy-sample-papers.webp"}, {"@type": "ListItem", "position": 9, "name": "CBSE Class 12 Economics — Boards Topper 5-Book Bundle", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-economics-boards-topper-5-book-bundle.pdf&title=CBSE%20Class%2012%20Economics%20%E2%80%94%20Boards%20Topper%205-Book%20Bundle", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-economics-boards-topper-5-book-bundle.webp"}, {"@type": "ListItem", "position": 10, "name": "CBSE Class 12 Economics — Boards Pro Question Bank", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-economics-question-bank-boards-pro.pdf&title=CBSE%20Class%2012%20Economics%20%E2%80%94%20Boards%20Pro%20Question%20Bank", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-economics-question-bank-boards-pro.webp"}, {"@type": "ListItem", "position": 11, "name": "CUET Business Studies — One Book For CUET", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcuet-business-studies-one-book.pdf&title=CUET%20Business%20Studies%20%E2%80%94%20One%20Book%20For%20CUET", "image": "https://thunderstudypdf.indevs.in/img/cuet-business-studies-one-book.webp"}, {"@type": "ListItem", "position": 12, "name": "CBSE Class 12 History — Boards Killer", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-history-boards-killer.pdf&title=CBSE%20Class%2012%20History%20%E2%80%94%20Boards%20Killer", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-history-boards-killer.webp"}, {"@type": "ListItem", "position": 13, "name": "CBSE Class 12 Political Science — Boards Killer", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-political-science-boards-killer.pdf&title=CBSE%20Class%2012%20Political%20Science%20%E2%80%94%20Boards%20Killer", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-political-science-boards-killer.webp"}, {"@type": "ListItem", "position": 14, "name": "CBSE Class 12 Geography — Boards Killer", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-geography-boards-killer.pdf&title=CBSE%20Class%2012%20Geography%20%E2%80%94%20Boards%20Killer", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-geography-boards-killer.webp"}, {"@type": "ListItem", "position": 15, "name": "CBSE Class 12 English — Boards Killer", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-english-boards-killer.pdf&title=CBSE%20Class%2012%20English%20%E2%80%94%20Boards%20Killer", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-english-boards-killer.webp"}, {"@type": "ListItem", "position": 16, "name": "CBSE Class 12 Applied Maths — Boards Pro Series", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-applied-maths-boards-pro.pdf&title=CBSE%20Class%2012%20Applied%20Maths%20%E2%80%94%20Boards%20Pro%20Series", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-applied-maths-boards-pro.webp"}, {"@type": "ListItem", "position": 17, "name": "CBSE Class 12 Psychology — Boards Pro Series", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-psychology-boards-pro.pdf&title=CBSE%20Class%2012%20Psychology%20%E2%80%94%20Boards%20Pro%20Series", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-psychology-boards-pro.webp"}, {"@type": "ListItem", "position": 18, "name": "CBSE Class 12 Fine Arts (Painting) — Boards Pro Series", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-fine-arts-painting-boards-pro.pdf&title=CBSE%20Class%2012%20Fine%20Arts%20%28Painting%29%20%E2%80%94%20Boards%20Pro%20Series", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-fine-arts-painting-boards-pro.webp"}, {"@type": "ListItem", "position": 19, "name": "CBSE Class 12 Home Science — Question Bank", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fwondermayank.github.io%2Fupload%2FHOME%2520SCIENCE%2520QB%2520By%2520Thunderstudy_compressed.pdf&title=CBSE%20Class%2012%20Home%20Science%20%E2%80%94%20Question%20Bank", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-home-science-question-bank-thunderstudy.webp"}, {"@type": "ListItem", "position": 20, "name": "CBSE Class 12 English — Boards Pro Question Bank", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-english-question-bank-boards-pro.pdf&title=CBSE%20Class%2012%20English%20%E2%80%94%20Boards%20Pro%20Question%20Bank", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-english-question-bank-boards-pro.webp"}, {"@type": "ListItem", "position": 21, "name": "CBSE Class 12 Maths — Boards Pro Question Bank", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-maths-question-bank-boards-pro.pdf&title=CBSE%20Class%2012%20Maths%20%E2%80%94%20Boards%20Pro%20Question%20Bank", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-maths-question-bank-boards-pro.webp"}, {"@type": "ListItem", "position": 22, "name": "CBSE Class 12 Information Practices — Boards Pro Question Bank", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-information-practices-question-bank-boards-pro.pdf&title=CBSE%20Class%2012%20Information%20Practices%20%E2%80%94%20Boards%20Pro%20Question%20Bank", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-information-practices-question-bank-boards-pro.webp"}, {"@type": "ListItem", "position": 23, "name": "CBSE Class 12 Computer Science — Boards Pro Question Bank", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcbse-class-12-computer-science-question-bank-boards-pro.pdf&title=CBSE%20Class%2012%20Computer%20Science%20%E2%80%94%20Boards%20Pro%20Question%20Bank", "image": "https://thunderstudypdf.indevs.in/img/cbse-class-12-computer-science-question-bank-boards-pro.webp"}, {"@type": "ListItem", "position": 24, "name": "CUET Economics — One Book For CUET", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcuet-economics-one-book.pdf&title=CUET%20Economics%20%E2%80%94%20One%20Book%20For%20CUET", "image": "https://thunderstudypdf.indevs.in/img/cuet-economics-one-book.webp"}, {"@type": "ListItem", "position": 25, "name": "CUET English — One Book For CUET", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcuet-english-one-book.pdf&title=CUET%20English%20%E2%80%94%20One%20Book%20For%20CUET", "image": "https://thunderstudypdf.indevs.in/img/cuet-english-one-book.webp"}, {"@type": "ListItem", "position": 26, "name": "CUET General Test — One Book For CUET", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcuet-general-test-one-book.pdf&title=CUET%20General%20Test%20%E2%80%94%20One%20Book%20For%20CUET", "image": "https://thunderstudypdf.indevs.in/img/cuet-general-test-one-book.webp"}, {"@type": "ListItem", "position": 27, "name": "CUET Accountancy — One Book For CUET", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcuet-accountancy-one-book.pdf&title=CUET%20Accountancy%20%E2%80%94%20One%20Book%20For%20CUET", "image": "https://thunderstudypdf.indevs.in/img/cuet-accountancy-one-book.webp"}, {"@type": "ListItem", "position": 28, "name": "CUET Political Science — One Book For CUET", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcuet-political-science-one-book.pdf&title=CUET%20Political%20Science%20%E2%80%94%20One%20Book%20For%20CUET", "image": "https://thunderstudypdf.indevs.in/img/cuet-political-science-one-book.webp"}, {"@type": "ListItem", "position": 29, "name": "CUET History — One Book For CUET", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fbooks.thunderstudypdf.indevs.in%2Fcuet-history-one-book.pdf&title=CUET%20History%20%E2%80%94%20One%20Book%20For%20CUET", "image": "https://thunderstudypdf.indevs.in/img/cuet-history-one-book.webp"}, {"@type": "ListItem", "position": 30, "name": "General Knowledge (GK) Book — UPSC, SSC, Railways", "url": "https://thunderstudypdf.indevs.in/reader?link=https%3A%2F%2Fthunderstudy.indevs.in%2FGK_Thunderstudy_compressed.pdf&title=General%20Knowledge%20%28GK%29%20Book%20%E2%80%94%20UPSC%2C%20SSC%2C%20Railways", "image": "https://thunderstudypdf.indevs.in/img/general-knowledge-gk-upsc-ssc-railways-book.webp"}]}}
+</script>
 
-<!-- ===== Compiled Tailwind (built by `npm run build`, see tailwind.config.js) ===== -->
-<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/thunder-ui.css">
+<link rel="stylesheet" href="/app.css">
 
-<style>
-  :root{
-    --primary:#7897D1; --primary-soft:#9CB2DE; --primary-active:#5D79B3;
-    --secondary:#D6BD82; --accent-pink:#F7B8CB; --accent-yellow:#FBE99C;
-    --ink:#26324A; --muted:#667085; --on-primary:#FFFFFF; --on-dark:#F4F1FF; --on-dark-soft:#A9A4B8;
-    --canvas:#EEF3FF; --surface:#FFFFFF; --card:#FFFFFF; --surface-dark:#121212;
-    --hairline:#D8E1F2; --hairline-strong:#B9C8E3;
-  }
-  html.dark{
-    --primary:#9A7AFB; --primary-soft:#7560C7; --primary-active:#7E64CE;
-    --secondary:#CBDD98; --accent-pink:#F0A8C0; --accent-yellow:#F2DB82;
-    --ink:#F4F1FF; --muted:#A9A4B8;
-    --canvas:#121212; --surface:#1B1B1F; --card:#222228; --surface-dark:#000000;
-    --hairline:#2A2A2A; --hairline-strong:#3A3A3C;
-  }
-  body{font-family:Inter,system-ui,sans-serif;}
-  .product-shadow{ filter: drop-shadow(3px 5px 30px rgba(0,0,0,0.22)); }
-  .press:active{ transform: scale(0.95); }
-  ::-webkit-scrollbar{height:8px;width:8px;}
-  ::-webkit-scrollbar-thumb{background:var(--hairline-strong);border-radius:9999px;}
-  #loader{transition:opacity .5s ease, visibility .5s ease;}
-  #loader.hide{opacity:0;visibility:hidden;pointer-events:none;}
-  .book-3d{perspective:600px;}
-  .book-3d-inner{transform-style:preserve-3d;animation:spinBook 2.2s linear infinite;}
-  @keyframes spinBook{from{transform:rotateY(0deg) rotateX(8deg);}to{transform:rotateY(360deg) rotateX(8deg);}}
-  .popular-books-section{overflow:hidden}.popular-book-shelf{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,2vw,28px);align-items:end;padding:24px 20px 4px;perspective:1200px}.shelf-book{min-width:0;color:var(--ink);display:block;transition:transform .25s ease}.shelf-book:hover{transform:translateY(-10px)}.book-object{height:285px;position:relative;transform-style:preserve-3d;filter:drop-shadow(5px 10px 9px rgba(27,33,48,.22))}.book-cover-face{position:absolute;inset:0 12px 0 0;overflow:hidden;border-radius:2px 7px 7px 2px;background:var(--primary);transform:rotateY(-8deg);transform-origin:left center;box-shadow:inset -9px 0 12px rgba(0,0,0,.22),inset 3px 0 2px rgba(255,255,255,.18);padding:15px;color:#fff;display:flex;flex-direction:column;justify-content:space-between}.book-cover-face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.88;mix-blend-mode:screen}.book-cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.12),rgba(15,23,42,.8))}.book-cover-face span,.book-cover-face strong,.book-cover-face small{position:relative;z-index:1}.book-cover-face span{font-size:8px;letter-spacing:.13em;font-weight:700}.book-cover-face strong{font-family:Inter,sans-serif;font-size:17px;line-height:1.08;text-shadow:0 2px 5px rgba(0,0,0,.28)}.book-cover-face small{font-size:9px}.book-pages{position:absolute;z-index:-1;right:0;top:8px;bottom:6px;width:22px;border-radius:0 5px 5px 0;background:repeating-linear-gradient(90deg,#e9e5da 0,#e9e5da 2px,#cfc8b8 3px,#f7f4ec 4px);transform:translateZ(-4px) rotateY(-3deg)}.book-spine-label{position:absolute;left:-10px;top:20px;bottom:18px;width:12px;background:var(--primary-active);color:#fff;writing-mode:vertical-rl;text-orientation:mixed;font-size:8px;letter-spacing:.15em;text-align:center;padding:8px 0;border-radius:2px 0 0 2px}.shelf-book-1 .book-cover-face{background:#2b3c96}.shelf-book-2 .book-cover-face{background:#d176a0}.shelf-book-3 .book-cover-face{background:#6d9eb8}.shelf-book-4 .book-cover-face{background:#8b4b68}.shelf-book-5 .book-cover-face{background:#805031}.shelf-book-2 .book-spine-label{background:#b8577e}.shelf-book-3 .book-spine-label{background:#4a7e9a}.shelf-book-4 .book-spine-label{background:#66364d}.shelf-book-5 .book-spine-label{background:#5d351f}.shelf-book-meta{padding:16px 2px 0}.shelf-book-meta span{display:block;color:var(--primary-active);font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:6px}.shelf-book-meta strong{display:block;font-size:13px;line-height:1.3}.pdf-showcase{background:var(--surface);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}.pdf-showcase-visual{height:280px;position:relative;display:block;perspective:800px;cursor:pointer}.showcase-page{position:absolute;width:235px;height:275px;left:50%;top:50%;box-shadow:0 20px 35px rgba(38,50,74,.2);border-radius:3px;transition:transform .3s}.pdf-showcase-visual:hover .showcase-page-front{transform:translate(-50%,-50%) rotate(-4deg) rotateY(-10deg) translateY(-5px)}.showcase-page-back{background:var(--primary-soft);transform:translate(-40%,-50%) rotate(8deg) translateX(26px)}.showcase-page-front{background:var(--primary);color:#fff;transform:translate(-50%,-50%) rotate(-6deg);padding:35px 27px;display:flex;flex-direction:column;justify-content:space-between}.showcase-page-front span{font-family:Inter,sans-serif;font-size:23px;line-height:1.05;letter-spacing:-.04em}.showcase-page-front b{color:var(--accent-yellow)}.showcase-page-front small{font-size:11px;letter-spacing:.12em;text-transform:uppercase}.showcase-bar{width:45px;border-top:3px solid var(--accent-yellow)}.showcase-cursor{position:absolute;bottom:12px;right:12%;width:43px;height:43px;border-radius:50%;background:var(--accent-yellow);color:var(--ink);display:grid;place-items:center;box-shadow:0 7px 15px rgba(38,50,74,.18)}
-  @media(max-width:900px){.popular-book-shelf{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:25px}.shelf-book-4,.shelf-book-5{display:none}}
-  @media(max-width:560px){.popular-book-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-left:8px;padding-right:8px}.shelf-book-3{display:none}.book-object{height:235px}.book-cover-face strong{font-size:14px}.pdf-showcase-visual{height:240px}.showcase-page{width:180px;height:220px}.showcase-page-front{padding:25px 20px}.showcase-page-front span{font-size:18px}}
-</style>
+<!-- ===== React + Babel (the library grid only; header, sidebar, dock and footer are plain HTML) ===== -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js" crossorigin></script>
 </head>
-<body class="bg-canvas text-ink">
+<body>
 
-<div id="loader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-5 bg-surfacedark">
-  <div class="book-3d w-28 h-28">
-    <div class="book-3d-inner relative w-full h-full">
-      <div class="absolute inset-0 rounded-md" style="transform:translateZ(14px);background:linear-gradient(135deg,var(--primary),var(--primary-active))"></div>
-      <div class="absolute inset-0 rounded-md" style="transform:rotateY(90deg) translateZ(14px);background:linear-gradient(135deg,var(--secondary),var(--primary-soft))"></div>
-      <div class="absolute inset-0 rounded-md" style="transform:rotateY(180deg) translateZ(14px);background:linear-gradient(135deg,var(--primary-active),var(--primary))"></div>
-      <div class="absolute inset-0 rounded-md" style="transform:rotateY(270deg) translateZ(14px);background:linear-gradient(135deg,var(--accent-pink),var(--primary-soft))"></div>
-    </div>
-  </div>
-  <div class="text-ondark text-sm font-bold tracking-[2px] uppercase">Loading ThunderStudy PDF</div>
+<!-- ============ LOADER ============ -->
+<div id="loader" aria-hidden="true"><div class="loader-blob"></div></div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+<div class="wrap">
+<a aria-label="ThunderStudy PDF by Wondermayank" class="brand" href="/">
+<span class="brand-mark"><img alt="" height="32" src="/favicon.svg?v=2" width="32"></span>
+<span class="brand-text">
+<span class="brand-name">Thunder<span class="brand-accent">Study PDF</span></span>
+<span class="brand-by">by wondermayank</span>
+</span>
+</a>
+<nav aria-label="Main navigation" class="nav-links">
+<a class="active" href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/#latest">Latest</a>
+<a href="/#popular">Popular</a>
+<a href="/pdf.html">Reader</a>
+<a href="/#faq">FAQ</a>
+</nav>
+<div class="nav-right">
+<a aria-label="Contact" class="nav-request" href="https://wondermayank.in/contact" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M12 12v6M9 15h6"></path></svg></a>
+<button aria-label="Toggle dark mode" class="theme-btn" id="themeBtn" type="button">
+<svg fill="none" id="themeIconSun" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4"></path><path d="M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7"></path><path d="M2.5 12h2.4M19.1 12h2.4"></path><path d="M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"></path></svg>
+<svg fill="none" id="themeIconMoon" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"></path></svg>
+</button>
+<a class="nav-cta" href="https://thundertest.indevs.in/dashboard" rel="noopener" target="_blank">Mock Test</a>
+<button aria-expanded="false" aria-label="Menu" class="ham-btn" id="hamBtn" type="button">
+<svg aria-hidden="true" class="ham-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24" width="20"><path class="ham-top" d="M3 6h18"></path><path class="ham-mid" d="M3 12h18"></path><path class="ham-bot" d="M3 18h18"></path></svg>
+</button>
+</div>
+</div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+<a class="active" href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/#latest">Latest PDFs</a>
+<a href="/#popular">Popular</a>
+<a href="/pdf.html">PDF Reader</a>
+<a href="/#faq">FAQ</a>
+<a href="https://thunderstudy.indevs.in/">ThunderStudy</a>
+<a href="https://thundertest.indevs.in/">Mock Test</a>
 </div>
 
-<div id="root"></div>
+<!-- ============ SIDEBAR (1200px and up) ============ -->
+<aside class="side min" id="sideNav" aria-label="Page sections"><div class="side-card">
+<div class="side-head"><span class="side-title">PDF Library</span><button type="button" class="side-toggle" id="sideToggle" aria-expanded="false" aria-controls="sideNav" aria-label="Show sidebar icons"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 7 5 5-5 5M13 7l5 5-5 5"/></svg></button></div>
+<nav class="side-scroll" aria-label="Sections">
+<div class="side-group"><p class="side-label">Start</p>
+<a class="side-link" href="#home"><span class="side-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><span class="side-text">Overview</span></a>
+<a class="side-link" href="#categories"><span class="side-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span><span class="side-text">Categories</span></a>
+</div>
+<div class="side-group"><p class="side-label">Library</p>
+<a class="side-link" href="#latest"><span class="side-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><span class="side-text">Latest PDFs</span></a>
+<a class="side-link" href="#popular"><span class="side-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/></svg></span><span class="side-text">Popular</span></a>
+<a class="side-link" href="#pdf-reader-showcase"><span class="side-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/></svg></span><span class="side-text">PDF reader</span></a>
+</div>
+<div class="side-group"><p class="side-label">More</p>
+<a class="side-link" href="#about"><span class="side-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span><span class="side-text">Thunder links</span></a>
+<a class="side-link" href="#faq"><span class="side-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg></span><span class="side-text">FAQ</span></a>
+</div>
+</nav>
+<div class="side-foot"><a class="side-top" href="#home" title="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 13 5-5 5 5M7 19l5-5 5 5"/></svg><span class="side-top-text">Back to top</span></a></div>
+</div></aside>
+
+<div id="top"></div>
+<main id="root"></main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="wmf">
+<svg aria-hidden="true" focusable="false" height="0" style="position:absolute" width="0">
+<defs>
+<symbol id="i-instagram" viewBox="0 0 2500 2500"><defs><radialGradient id="ig-grad-a" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"/><stop offset=".78" stop-color="#d82d7e"/></radialGradient><radialGradient id="ig-grad-b" cx="1516.14" cy="2623.81" r="2572.12" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"/><stop offset="1" stop-color="#8c3aaa"/></radialGradient></defs><path d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57" fill="url(#ig-grad-a)"/><path d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57" fill="url(#ig-grad-b)"/></symbol>
+<symbol id="i-youtube" viewBox="0 0 256 180"><path fill="red" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></symbol>
+<symbol id="i-x" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/></symbol>
+<symbol id="i-reddit" viewBox="0 0 256 256"><circle cx="128" cy="128" r="128" fill="#ff4500"/><path fill="#fff" d="M213.15 129.22c0-10.376-8.391-18.617-18.617-18.617a18.74 18.74 0 0 0-12.97 5.189c-12.818-9.157-30.368-15.107-49.9-15.87l8.544-39.981l27.773 5.95c.307 7.02 6.104 12.667 13.278 12.667c7.324 0 13.275-5.95 13.275-13.278c0-7.324-5.95-13.275-13.275-13.275c-5.188 0-9.768 3.052-11.904 7.478l-30.976-6.562c-.916-.154-1.832 0-2.443.458c-.763.458-1.22 1.22-1.371 2.136l-9.464 44.558c-19.837.612-37.692 6.562-50.662 15.872a18.74 18.74 0 0 0-12.971-5.188c-10.377 0-18.617 8.391-18.617 18.617c0 7.629 4.577 14.037 10.988 16.939a33.6 33.6 0 0 0-.458 5.646c0 28.686 33.42 52.036 74.621 52.036c41.202 0 74.622-23.196 74.622-52.036a35 35 0 0 0-.458-5.646c6.408-2.902 10.985-9.464 10.985-17.093M85.272 142.495c0-7.324 5.95-13.275 13.278-13.275c7.324 0 13.275 5.95 13.275 13.275s-5.95 13.278-13.275 13.278c-7.327.15-13.278-5.953-13.278-13.278m74.317 35.251c-9.156 9.157-26.553 9.768-31.588 9.768c-5.188 0-22.584-.765-31.59-9.768c-1.371-1.373-1.371-3.51 0-4.883c1.374-1.371 3.51-1.371 4.884 0c5.8 5.8 18.008 7.782 26.706 7.782s21.058-1.983 26.704-7.782c1.374-1.371 3.51-1.371 4.884 0c1.22 1.373 1.22 3.51 0 4.883m-2.443-21.822c-7.325 0-13.275-5.95-13.275-13.275s5.95-13.275 13.275-13.275c7.327 0 13.277 5.95 13.277 13.275c0 7.17-5.95 13.275-13.277 13.275"/></symbol>
+<symbol id="i-telegram" viewBox="0 0 256 256"><defs><linearGradient id="tg-grad" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#2aabee"/><stop offset="100%" stop-color="#229ed9"/></linearGradient></defs><path fill="url(#tg-grad)" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.04 128.04 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51s-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0"/><path fill="#fff" d="M57.94 126.648q55.98-24.384 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072"/></symbol>
+</defs>
+</svg>
+
+<div class="wmf-wrap">
+<div class="wmf-grid">
+<div class="wmf-brand-col">
+<a aria-label="WonderMayank home" class="wmf-brand" href="https://wondermayank.in/">
+<span class="wmf-mark"><img alt="WonderMayank logo" decoding="async" height="36" loading="lazy" src="/favicon.svg" width="36"></span>
+<span class="wmf-brand-text">
+<span class="wmf-brand-name">Wonder<span class="wmf-accent">Mayank</span></span>
+<span class="wmf-brand-by">Web Developer &amp; Creator</span>
+</span>
+</a>
+<p class="wmf-desc">Free project tools, vibecoding experiments and exam-prep resources for Indian students.</p>
+<a aria-label="Meet Tiny and Byte, the Wondermayank mascots" class="wmf-mascot" href="https://wondermayank.in/mascot/">
+<img alt="Tiny and Byte, the Wondermayank mascots" decoding="async" height="40" loading="lazy" src="https://wondermayank.in/mascot/img/duo-thumb.webp" width="72">
+<span><b>Meet Tiny &amp; Byte</b><small>Our mascots</small></span>
+</a>
+<div class="wmf-social">
+<div>
+<div class="wmf-social-label">Wondermayank</div>
+<div class="wmf-social-row">
+<a aria-label="Wondermayank on Instagram" class="wmf-social-btn" href="https://www.instagram.com/wondermayank" rel="noopener noreferrer" target="_blank" title="Instagram"><svg aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+<a aria-label="Wondermayank on YouTube" class="wmf-social-btn" href="https://www.youtube.com/@wondermayank" rel="noopener noreferrer" target="_blank" title="YouTube"><svg aria-hidden="true"><use href="#i-youtube"></use></svg></a>
+<a aria-label="Wondermayank on X" class="wmf-social-btn" href="https://x.com/wondermayankx" rel="noopener noreferrer" target="_blank" title="X"><svg aria-hidden="true"><use href="#i-x"></use></svg></a>
+<a aria-label="Wondermayank on Reddit" class="wmf-social-btn" href="https://www.reddit.com/user/wondermayankx" rel="noopener noreferrer" target="_blank" title="Reddit"><svg aria-hidden="true"><use href="#i-reddit"></use></svg></a>
+<a aria-label="Wondermayank on Telegram" class="wmf-social-btn" href="https://t.me/wondermayank" rel="noopener noreferrer" target="_blank" title="Telegram"><svg aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+</div>
+</div>
+<div>
+<div class="wmf-social-label">ThunderStudy</div>
+<div class="wmf-social-row">
+<a aria-label="ThunderStudy on Instagram" class="wmf-social-btn" href="https://www.instagram.com/thunderstudyx" rel="noopener noreferrer" target="_blank" title="Instagram"><svg aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+<a aria-label="ThunderStudy on YouTube" class="wmf-social-btn" href="https://www.youtube.com/@thunderstudy_official" rel="noopener noreferrer" target="_blank" title="YouTube"><svg aria-hidden="true"><use href="#i-youtube"></use></svg></a>
+<a aria-label="ThunderStudy on X" class="wmf-social-btn" href="https://x.com/thunderstudyx" rel="noopener noreferrer" target="_blank" title="X"><svg aria-hidden="true"><use href="#i-x"></use></svg></a>
+<a aria-label="ThunderStudy on Reddit" class="wmf-social-btn" href="https://www.reddit.com/user/thunderstudyx" rel="noopener noreferrer" target="_blank" title="Reddit"><svg aria-hidden="true"><use href="#i-reddit"></use></svg></a>
+<a aria-label="ThunderStudy on Telegram" class="wmf-social-btn" href="https://t.me/thunderstudy" rel="noopener noreferrer" target="_blank" title="Telegram"><svg aria-hidden="true"><use href="#i-telegram"></use></svg></a>
+</div>
+</div>
+</div>
+</div>
+<nav aria-label="ThunderStudy">
+<h2 class="wmf-title">ThunderStudy</h2>
+<ul class="wmf-links">
+<li><a href="https://thunderstudy.indevs.in/">ThunderStudy</a></li>
+<li><a href="https://thundertest.indevs.in/">CBT Mock</a></li>
+<li><a aria-label="ThunderStudy blog" href="https://blog.thunderstudy.indevs.in/">Blog</a></li>
+<li><a aria-label="ThunderStudy AI home" href="https://ai.thunderstudy.indevs.in/">AI</a></li>
+</ul>
+</nav>
+<nav aria-label="Support">
+<h2 class="wmf-title">Support</h2>
+<ul class="wmf-links">
+<li><a aria-label="Wondermayank FAQ" href="https://wondermayank.in/faq">FAQ</a></li>
+<li><a aria-label="Email Wondermayank" href="https://wondermayank.in/mail">Mail</a></li>
+<li><a href="https://wondermayank.in/contact">Contact</a></li>
+<li><a href="https://wondermayank.in/copyright">Copyright</a></li>
+<li><a href="https://wondermayank.in/legal">Legal</a></li>
+</ul>
+</nav>
+<nav aria-label="wondermayank">
+<h2 class="wmf-title">wondermayank</h2>
+<ul class="wmf-links">
+<li><a href="https://make.wondermayank.in/">Vibecoding</a></li>
+<li><a href="https://project.wondermayank.in/">Useful Projects</a></li>
+<li><a href="https://wondermayank.in/">Portfolio</a></li>
+<li><a href="https://wondermayank.in/about">About</a></li>
+<li><a href="https://wondermayank.in/new">New</a></li>
+<li><a href="https://wondermayank.in/mascot/">Mascot</a></li>
+<li><a aria-label="Wondermayank blog" href="https://blog.wondermayank.indevs.in/">Blog</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="wmf-bottom">
+<div class="wmf-wrap wmf-bottom-inner">
+<div class="wmf-copy">&copy; 2026 WonderMayank. All rights reserved.</div>
+<nav aria-label="Legal" class="wmf-legal">
+<a href="https://wondermayank.in/cookies">Cookies</a>
+<a href="https://wondermayank.in/terms">Terms</a>
+<a href="https://wondermayank.in/privacy">Privacy</a>
+<a href="https://wondermayank.in/disclaimer">Disclaimer</a>
+<a href="https://wondermayank.in/sitemap">Sitemap</a>
+</nav>
+</div>
+</div>
+</footer>
+
+
+
+<!-- ============ FLOATING BOTTOM DOCK ============ -->
+<nav class="dock" aria-label="Quick links">
+  <div class="dock-bar">
+    <span class="dock-indicator" aria-hidden="true"></span>
+    <a class="dock-btn" href="#home" data-tab="home" data-label="Home" aria-label="Home" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg></a>
+    <a class="dock-btn" href="#categories" data-tab="categories" data-label="Categories" aria-label="Categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></a>
+    <a class="dock-btn" href="#latest" data-tab="latest" data-label="Latest PDFs" aria-label="Latest PDFs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a>
+    <a class="dock-btn" href="#popular" data-tab="popular" data-label="Popular" aria-label="Popular"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/></svg></a>
+    <a class="dock-btn" href="/pdf.html" data-tab="reader" data-label="Open a PDF" aria-label="Open a PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/></svg></a>
+  </div>
+</nav>
+<a class="to-top" id="toTop" href="#home" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 13 5-5 5 5M7 19l5-5 5 5"/></svg></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script type="text/babel" data-presets="react">
 const { useState, useMemo, useEffect } = React;
 
-/* ===================== REAL DATA (from thunderstudy.indevs.in) ===================== */
+/* ===================== BOOK DATA (from thundertest.indevs.in/books) =====================
+   cover: /img/<slug>.webp  (falls back to .png, .jpg, then a placeholder)
+   pdf:   direct PDF link, opened in the reader and saved by the Download button as "<title>.pdf" */
 const BOOKS = [
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_4909327286859926962_y.jpg', title:'Boards Dominator — Physics', sub:'Most Repeated Topics · Topper Answer Sheet · 3 Mock Tests · Mind Maps · 5 PYQ Papers', cat:'Science', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_4922813557183810432_y.jpg', title:'Boards Dominator — Chemistry', sub:'IMP Questions · Chapter-wise PYQs · Colourful Mind Maps · 5 Sample Papers', cat:'Science', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_4927446211988491220_y.jpg', title:'Boards Dominator — Biology', sub:'Most Repeated Topics · Topper Format · 5 PYQ Papers · 3 Mock Tests', cat:'Science', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6084659406831291790_y.jpg', title:'Boards Dominator — Mathematics', sub:'Mind Maps · Topper Answer Sheet · 5 Sample Papers · 5 PYQ Board Papers', cat:'Science', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6057485470872046814_y.jpg', title:'Boards Dominator — Physical Education', sub:'Chapter-Wise PYQs · High Priority Topics · 5 Full Sample Papers · Cheat Sheet', cat:'Science', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_4940627101547695096_y.jpg', title:'Boards Killer — History', sub:'IMP Topics · PYQs · Top 50 MCQs · Case Studies · VBQ · Topper Sheets', cat:'Humanities', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_4951850989258476381_y.jpg', title:'Boards Killer — Political Science', sub:'IMP Topics · Top 50 MCQs · Case Studies · VBQ · 3 Sample Papers', cat:'Humanities', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_4920531370476506095_y.jpg', title:'Boards Killer — Geography', sub:'IMP Topics · Top 50 MCQs · Case Studies · VBQ · Topper Answer Sheets', cat:'Humanities', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6113973954490862805_y.jpg', title:'Boards Killer — English', sub:'Mindmap · Topper Sheet · How To Write · PYQs Grammar · Character Sketch', cat:'Humanities', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6127641665708166166_w.jpg', title:'Boards Pro Series — Applied Maths', sub:'Digital Notes · Sample Paper · PYQs · Thunder Special · IMP Questions', cat:'Humanities', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6129893465521851821_y.jpg', title:'Boards Pro Series — Psychology', sub:'Digital & Handwritten Notes · Sample Paper · PYQs · Thunder Special', cat:'Humanities', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_4967569225237072796_y.jpg', title:'Boards Pro Series — Fine Arts / Painting', sub:'Digital Notes · Detail Notes · Sample Paper · PYQs · Be A Topper Guide', cat:'Humanities', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6334467078567431810_w.jpg', title:'20+ Sample Papers — Business Studies', sub:'CBSE SQP · 5-Year PYQs · Keywords · 50 IMP Q · NCERT Underline · Topper Sheet', cat:'Commerce', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6334467078567431827_y.jpg', title:'20+ Sample Papers — Economics', sub:'CBSE SQP · 5-Year PYQs · IMP Dates · Topper Sheet · Colourful Mindmap', cat:'Commerce', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6052869020978973973_y.jpg', title:'20+ Sample Papers — Accountancy', sub:'CBSE SQP · 5-Year PYQs · Mindmap · One Page One Chapter · Head & Subhead', cat:'Commerce', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6129401245089861200_y.jpg', title:'Economics Boards Topper — 5-Book Toolkit', sub:'Basic to Advanced Learning · Topper Toolkit · NCERT by Thunder · Final Booster', cat:'Economics', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1AQ39MTziS5b5BEuCOIiWB_b8A5rC8Gai' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6147654443781000447_y.jpg', title:'Boards Pro Series — Economics QB', sub:'Latest CBSE Pattern · 5000+ Q · Chapterwise · Assertion & Reasoning · Case Study', cat:'Question Bank', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6127641665708166166_w.jpg', title:'Boards Pro Series — Applied Maths QB', sub:'5000+ Questions · PYQs · Chapterwise · Most Expected 2025-26 · Case Study', cat:'Question Bank', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6129893465521851791_y.jpg', title:'Boards Pro Series — English QB', sub:'Latest CBSE Pattern · 5000+ Q · Chapterwise · Competency-Based · Literature', cat:'Question Bank', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6134015448715038443_y.jpg', title:'Boards Pro Series — Mathematics QB', sub:'5000+ Questions · Chapterwise · Case Study · Assertion & Reasoning', cat:'Question Bank', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6179387659323641953_w.jpg', title:'Boards Pro Series — Information Practices QB', sub:'5000+ Q · Chapterwise · Programming & Database · Case Study · Viva Voce', cat:'Question Bank', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6179387659323641980_w.jpg', title:'Boards Pro Series — Computer Science QB', sub:'5000+ Q · Chapterwise · Programming & Database · Practice Papers · MCQs', cat:'Question Bank', price:'FREE', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6158707327368892506_y.jpg', title:'One Book For CUET — Economics', sub:'Microeconomics · Macroeconomics · Indian Economy · 30+ Mock Tests · Mind Maps', cat:'CUET', price:'₹99', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6181639459137327003_y.jpg', title:'One Book For CUET — English', sub:'Reading Comprehension · Vocabulary · Grammar · 30+ CBT Mock Tests', cat:'CUET', price:'₹99', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6183575716293709829_y.jpg', title:'One Book For CUET — GAT', sub:'5000+ MCQs · Reasoning · Quant & Numerical Aptitude · 30+ CBT Mock Tests', cat:'CUET', price:'₹99', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6197109364401835402_y.jpg', title:'One Book For CUET — Business Studies', sub:'Principles of Management · Business Environment · Planning · Staffing · CBT Mocks', cat:'CUET', price:'₹99', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6212830293324926523_y.jpg', title:'One Book For CUET — Accountancy', sub:'Financial Accounting · Partnership · Company Accounts · Reconciliation', cat:'CUET', price:'₹99', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6226714677052378827_y.jpg', title:'One Book For CUET — Political Science', sub:'Indian Political System · Political Theories · PYQs 2023-25 · 20 Mock Tests', cat:'CUET', price:'₹99', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/photo_6226714677052378872_y.jpg', title:'One Book For CUET — History', sub:'Themes in Indian History I-III · 3-Year PYQs · 20 Mock Tests · QR for CBT', cat:'CUET', price:'₹99', link:'https://drive.google.com/drive/u/0/folders/1joTejQ8cbehcXiXettc4hEV-rE0xdDir' },
-  { img:'https://raw.githubusercontent.com/commercesehoga/books/main/file_00000000c69871faac6321f850c6b1cd.jpg', title:'General Knowledge — All Exams', sub:'Top GK from India & World · UPSC · PSC · SSC · Railways', cat:'GK', price:'FREE', link:'https://thunderstudy.indevs.in/GK_Thunderstudy_compressed.pdf' }
+ {
+  "slug": "cbse-class-12-physics-boards-dominator",
+  "title": "CBSE Class 12 Physics — Boards Dominator",
+  "subject": "Physics",
+  "desc": "Most repeated topics, PYQs, Mind Maps, Mock Tests and Topper Answer Sheets.",
+  "ribbon": "New",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-physics-boards-dominator.pdf",
+  "tabs": [
+   "Science"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-chemistry-boards-dominator",
+  "title": "CBSE Class 12 Chemistry — Boards Dominator",
+  "subject": "Chemistry",
+  "desc": "IMP Questions, Chapter-wise PYQs, Mind Maps (colourful), 5 Sample Papers.",
+  "ribbon": "",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-chemistry-boards-dominator.pdf",
+  "tabs": [
+   "Science"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-biology-boards-dominator",
+  "title": "CBSE Class 12 Biology — Boards Dominator",
+  "subject": "Biology",
+  "desc": "Most repeated topics, Topper Format, 5 PYQ Papers, 3 Mock Tests.",
+  "ribbon": "",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-biology-boards-dominator.pdf",
+  "tabs": [
+   "Science"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-maths-boards-dominator",
+  "title": "CBSE Class 12 Maths — Boards Dominator",
+  "subject": "Mathematics",
+  "desc": "Mind Maps, Topper Answer Sheet, 5 Sample Papers and 5 PYQ Board Papers.",
+  "ribbon": "",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-maths-boards-dominator.pdf",
+  "tabs": [
+   "Science"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-physical-education-boards-dominator",
+  "title": "CBSE Class 12 Physical Education — Boards Dominator",
+  "subject": "Physical Education",
+  "desc": "Chapter-wise PYQs, High Priority Topics, 5 Full Sample Papers, Cheat Sheet.",
+  "ribbon": "",
+  "was": "₹199",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-physical-education-boards-dominator.pdf",
+  "tabs": [
+   "Science"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-business-studies-sample-papers",
+  "title": "CBSE Class 12 Business Studies — 20+ Sample Papers",
+  "subject": "Business Studies",
+  "desc": "SQP, PYQs, Keywords, Topper Sheet, 50 IMP Q, One Page One Chapter, NCERT Underline.",
+  "ribbon": "Bestseller",
+  "was": "₹299",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-business-studies-sample-papers.pdf",
+  "tabs": [
+   "Commerce"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-economics-sample-papers",
+  "title": "CBSE Class 12 Economics — 20+ Sample Papers",
+  "subject": "Economics",
+  "desc": "CBSE SQP, 5-Year PYQs, IMP Dates, Topper Answer Sheet, Colourful Notes, Mindmap.",
+  "ribbon": "",
+  "was": "₹299",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-economics-sample-papers.pdf",
+  "tabs": [
+   "Commerce"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-accountancy-sample-papers",
+  "title": "CBSE Class 12 Accountancy — 20+ Sample Papers",
+  "subject": "Accountancy",
+  "desc": "SQP, PYQs, Mindmap, Topper Sheet, 50 IMP Q, One Page One Chapter, Head and Subhead.",
+  "ribbon": "",
+  "was": "₹299",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-accountancy-sample-papers.pdf",
+  "tabs": [
+   "Commerce"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-economics-boards-topper-5-book-bundle",
+  "title": "CBSE Class 12 Economics — Boards Topper 5-Book Bundle",
+  "subject": "Economics",
+  "desc": "Basic Learning to Advanced to Topper Toolkit to NCERT by Thunder to Final Booster.",
+  "ribbon": "",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-economics-boards-topper-5-book-bundle.pdf",
+  "tabs": [
+   "Commerce"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-economics-question-bank-boards-pro",
+  "title": "CBSE Class 12 Economics — Boards Pro Question Bank",
+  "subject": "Economics",
+  "desc": "Latest CBSE Pattern, PYQs, Chapterwise, 2025-26 Most Expected, Assertion and Reasoning, Case Study.",
+  "ribbon": "5000+ Q",
+  "was": "₹349",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-economics-question-bank-boards-pro.pdf",
+  "tabs": [
+   "Commerce",
+   "Question Bank"
+  ]
+ },
+ {
+  "slug": "cuet-business-studies-one-book",
+  "title": "CUET Business Studies — One Book For CUET",
+  "subject": "Business Studies",
+  "desc": "Principles of Management, Business Environment, Planning, Staffing, Directing, Controlling. CBT Mocks.",
+  "ribbon": "5000+ MCQ",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cuet-business-studies-one-book.pdf",
+  "tabs": [
+   "Commerce",
+   "CUET"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-history-boards-killer",
+  "title": "CBSE Class 12 History — Boards Killer",
+  "subject": "History",
+  "desc": "IMP Topics, PYQs, Top 50 MCQs, Case Studies, VBQ, Complete Notes, Topper Sheets.",
+  "ribbon": "",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-history-boards-killer.pdf",
+  "tabs": [
+   "Humanities"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-political-science-boards-killer",
+  "title": "CBSE Class 12 Political Science — Boards Killer",
+  "subject": "Political Science",
+  "desc": "IMP Topics, Top 50 MCQs and Case Studies, VBQ, Complete Notes, 3 Sample Papers.",
+  "ribbon": "",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-political-science-boards-killer.pdf",
+  "tabs": [
+   "Humanities"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-geography-boards-killer",
+  "title": "CBSE Class 12 Geography — Boards Killer",
+  "subject": "Geography",
+  "desc": "IMP Topics, PYQs, Top 50 MCQs and Case Studies, 3 Sample Papers, Topper Guide.",
+  "ribbon": "",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-geography-boards-killer.pdf",
+  "tabs": [
+   "Humanities"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-english-boards-killer",
+  "title": "CBSE Class 12 English — Boards Killer",
+  "subject": "English",
+  "desc": "Mindmap, Topper Sheet, How to Write, PYQs Grammar, Character Sketch, IMP by Thunder.",
+  "ribbon": "",
+  "was": "₹249",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-english-boards-killer.pdf",
+  "tabs": [
+   "Humanities"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-applied-maths-boards-pro",
+  "title": "CBSE Class 12 Applied Maths — Boards Pro Series",
+  "subject": "Applied Maths",
+  "desc": "Digital Notes, Sample Paper, PYQs, Thunder Special, IMP Questions. Be A Topper Guide.",
+  "ribbon": "",
+  "was": "₹199",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-applied-maths-boards-pro.pdf",
+  "tabs": [
+   "Humanities",
+   "Question Bank"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-psychology-boards-pro",
+  "title": "CBSE Class 12 Psychology — Boards Pro Series",
+  "subject": "Psychology",
+  "desc": "Digital and Handwritten Notes, Sample Paper, PYQs, Thunder Special, IMP Questions.",
+  "ribbon": "",
+  "was": "₹199",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-psychology-boards-pro.pdf",
+  "tabs": [
+   "Humanities"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-fine-arts-painting-boards-pro",
+  "title": "CBSE Class 12 Fine Arts (Painting) — Boards Pro Series",
+  "subject": "Fine Arts / Painting",
+  "desc": "Digital Notes, Detail Notes, Sample Paper, PYQs, IMP Questions, Be A Topper Guide.",
+  "ribbon": "",
+  "was": "₹199",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-fine-arts-painting-boards-pro.pdf",
+  "tabs": [
+   "Humanities"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-home-science-question-bank-thunderstudy",
+  "title": "CBSE Class 12 Home Science — Question Bank",
+  "subject": "Home Science",
+  "desc": "Nutrition, Food Science, Human Development, Textile and Clothing, Resource Management, Health and Hygiene, Family and Social Life.",
+  "ribbon": "New",
+  "was": "",
+  "pdf": "https://wondermayank.github.io/upload/HOME%20SCIENCE%20QB%20By%20Thunderstudy_compressed.pdf",
+  "tabs": [
+   "Humanities"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-english-question-bank-boards-pro",
+  "title": "CBSE Class 12 English — Boards Pro Question Bank",
+  "subject": "English",
+  "desc": "Latest CBSE Pattern, PYQs, Chapterwise, Competency-Based, Literature and Writing.",
+  "ribbon": "5000+ Q",
+  "was": "₹349",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-english-question-bank-boards-pro.pdf",
+  "tabs": [
+   "Question Bank"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-maths-question-bank-boards-pro",
+  "title": "CBSE Class 12 Maths — Boards Pro Question Bank",
+  "subject": "Mathematics",
+  "desc": "5000+ Questions, Chapterwise, Case Study, Assertion and Reasoning, Best Question Bank.",
+  "ribbon": "5000+ Q",
+  "was": "₹349",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-maths-question-bank-boards-pro.pdf",
+  "tabs": [
+   "Question Bank"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-information-practices-question-bank-boards-pro",
+  "title": "CBSE Class 12 Information Practices — Boards Pro Question Bank",
+  "subject": "Information Practice",
+  "desc": "Latest CBSE Pattern, PYQs, Chapterwise, Programming and Database, Case Study, MCQs, Viva Voce.",
+  "ribbon": "5000+ Q",
+  "was": "₹349",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-information-practices-question-bank-boards-pro.pdf",
+  "tabs": [
+   "Question Bank"
+  ]
+ },
+ {
+  "slug": "cbse-class-12-computer-science-question-bank-boards-pro",
+  "title": "CBSE Class 12 Computer Science — Boards Pro Question Bank",
+  "subject": "Computer Science",
+  "desc": "Latest CBSE Pattern, PYQs, Chapterwise, Programming and Database, Practice Papers, MCQs.",
+  "ribbon": "5000+ Q",
+  "was": "₹349",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cbse-class-12-computer-science-question-bank-boards-pro.pdf",
+  "tabs": [
+   "Question Bank"
+  ]
+ },
+ {
+  "slug": "cuet-economics-one-book",
+  "title": "CUET Economics — One Book For CUET",
+  "subject": "CUET · Economics",
+  "desc": "Microeconomics, Macroeconomics, Indian Economy. CBT Tests, 30+ Mock Tests, Mind Maps.",
+  "ribbon": "3000+ MCQ",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cuet-economics-one-book.pdf",
+  "tabs": [
+   "CUET"
+  ]
+ },
+ {
+  "slug": "cuet-english-one-book",
+  "title": "CUET English — One Book For CUET",
+  "subject": "CUET · English",
+  "desc": "Reading Comprehension, Vocabulary, Grammar and Verbal Ability. 30+ Mock Tests in CBT Format.",
+  "ribbon": "3000+ MCQ",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cuet-english-one-book.pdf",
+  "tabs": [
+   "CUET"
+  ]
+ },
+ {
+  "slug": "cuet-general-test-one-book",
+  "title": "CUET General Test — One Book For CUET",
+  "subject": "CUET · General Test",
+  "desc": "General Knowledge, Current Affairs, Quantitative Aptitude, Logical Reasoning, 30+ CBT Mock Tests.",
+  "ribbon": "5000+ MCQ",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cuet-general-test-one-book.pdf",
+  "tabs": [
+   "CUET"
+  ]
+ },
+ {
+  "slug": "cuet-accountancy-one-book",
+  "title": "CUET Accountancy — One Book For CUET",
+  "subject": "CUET · Accountancy",
+  "desc": "Financial Accounting, Partnership, Company Accounts, Financial Analysis, Reconciliation.",
+  "ribbon": "5000+ MCQ",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cuet-accountancy-one-book.pdf",
+  "tabs": [
+   "CUET"
+  ]
+ },
+ {
+  "slug": "cuet-political-science-one-book",
+  "title": "CUET Political Science — One Book For CUET",
+  "subject": "CUET · Political Science",
+  "desc": "Indian Political System, Political Theories, International Relations, PYQs 2023-25, 20 Mock Tests.",
+  "ribbon": "5000+ MCQ",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cuet-political-science-one-book.pdf",
+  "tabs": [
+   "CUET"
+  ]
+ },
+ {
+  "slug": "cuet-history-one-book",
+  "title": "CUET History — One Book For CUET",
+  "subject": "CUET · History",
+  "desc": "Themes in Indian History I–III, 3-Year PYQs, 20 Full Mock Tests, Special QR for CBT.",
+  "ribbon": "PYQs + CBT",
+  "was": "₹499",
+  "pdf": "https://books.thunderstudypdf.indevs.in/cuet-history-one-book.pdf",
+  "tabs": [
+   "CUET"
+  ]
+ },
+ {
+  "slug": "general-knowledge-gk-upsc-ssc-railways-book",
+  "title": "General Knowledge (GK) Book — UPSC, SSC, Railways",
+  "subject": "General Knowledge",
+  "desc": "Top General Knowledge from India and the World for UPSC, PSC, SSC, Railways and other competitive exams. GK by Mindmaster.",
+  "ribbon": "Highlight",
+  "was": "",
+  "pdf": "https://thunderstudy.indevs.in/GK_Thunderstudy_compressed.pdf",
+  "tabs": [
+   "GK"
+  ]
+ }
 ];
 
-/* "Popular" curated set — same real books/images/links, as used on thunderstudy.indevs.in */
-const POPULAR = [
-  BOOKS[29], BOOKS[0], BOOKS[1], BOOKS[2], BOOKS[5], BOOKS[6], BOOKS[7], BOOKS[12], BOOKS[13], BOOKS[24]
-];
+const POPULAR_SLUGS = ['general-knowledge-gk-upsc-ssc-railways-book','cbse-class-12-physics-boards-dominator','cbse-class-12-chemistry-boards-dominator','cbse-class-12-business-studies-sample-papers','cuet-general-test-one-book'];
+const POPULAR = POPULAR_SLUGS.map(sl => BOOKS.find(b => b.slug === sl)).filter(Boolean);
 
 const CATS = [
   { name:'All PDFs', icon:'grid' },
   { name:'Science', icon:'atom' },
-  { name:'Humanities', icon:'book' },
   { name:'Commerce', icon:'bank' },
-  { name:'Economics', icon:'news' },
+  { name:'Humanities', icon:'book' },
   { name:'Question Bank', icon:'stack' },
   { name:'CUET', icon:'trophy' },
   { name:'GK', icon:'globe' }
 ];
 
-const CAT_COLOR = {
-  Science:'#2E9E6B', Humanities:'#C97A1F', Commerce:'#3D8BD9', Economics:'#8A4E0F',
-  'Question Bank':'#5D4E9E', CUET:'#8B1E2E', GK:'#1F6B6B'
-};
+const readerHref = (b) => window.TSPdf ? window.TSPdf.readerUrl(b.pdf, b.title) : '/reader?link=' + encodeURIComponent(b.pdf) + '&title=' + encodeURIComponent(b.title);
+const onDownload = (b) => (e) => { e.preventDefault(); if (window.TSPdf) window.TSPdf.download(b.pdf, b.title, e.currentTarget); else window.open(b.pdf, '_blank'); };
 
 const ICONS = {
   grid:'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z',
@@ -181,122 +664,55 @@ const ICONS = {
   trophy:'M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z',
   globe:'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM2 12h20M12 2c2.5 2.7 4 6.2 4 10s-1.5 7.3-4 10c-2.5-2.7-4-6.2-4-10s1.5-7.3 4-10Z',
   search:'M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM21 21l-4.35-4.35',
-  sun:'M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z',
-  moon:'M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z',
   file:'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8L14 2ZM14 2v6h6',
   shield:'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z',
   bolt:'M13 2 3 14h9l-1 8 10-12h-9l1-8Z',
   dl:'M12 3v13M7 11l5 5 5-5M5 21h14',
-  menu:'M4 7h16M4 12h16M4 17h16',
-  chev:'M6 9l6 6 6-6'
+  chev:'M6 9l6 6 6-6',
+  arrow:'M5 12h14M13 6l6 6-6 6',
+  read:'M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 21V5',
+  upright:'M7 17 17 7M8 7h9v9'
 };
 
-function Icon({ name, className = "w-5 h-5", stroke = "currentColor" }) {
+function Icon({ name, className = "" }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d={ICONS[name]} />
     </svg>
   );
 }
 
-function Header({ query, setQuery, dark, setDark }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  return (
-    <header className="sticky top-0 z-40 h-16 bg-canvas/90 backdrop-blur border-b border-hairline">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center gap-5">
-        <a href="#home" className="flex items-center gap-2.5 font-bold text-lg shrink-0">
-          <img src="/favicon.svg?v=2" alt="ThunderStudy PDF" className="w-8 h-8 rounded-lg" />
-          <span>ThunderStudy PDF<span className="block text-[11px] font-normal text-muted">Study · Practice · Grow</span></span>
-        </a>
-        <div className="hidden md:flex flex-1 max-w-md items-center gap-2 bg-card border border-hairline rounded-pill h-11 pl-4 pr-1.5">
-          <Icon name="search" className="w-4 h-4 text-muted shrink-0" />
-          <input
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            placeholder="Search PDFs (e.g. Physics, CUET, Class 12...)"
-            className="flex-1 bg-transparent outline-none text-sm text-ink placeholder:text-muted"
-          />
-          <button className="w-8 h-8 rounded-pill bg-primary text-onprimary flex items-center justify-center shrink-0 press">
-            <Icon name="search" className="w-3.5 h-3.5" stroke="#fff" />
-          </button>
-        </div>
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-muted">
-          <a href="#home" className="text-ink relative after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-5 after:h-0.5 after:bg-ink">Home</a>
-          <a href="#categories" className="hover:text-ink">Categories</a>
-          <a href="#popular" className="hover:text-ink">Popular</a>
-          <a href="#about" className="hover:text-ink">About</a>
-        </nav>
-        <div className="flex items-center gap-2 ml-auto shrink-0">
-          <a href="https://thunderstudy.indevs.in/" target="_blank" rel="noopener" className="hidden sm:flex items-center gap-1.5 bg-card border border-hairlinestrong rounded-pill px-4 py-2 text-[13px] font-semibold press">
-            <Icon name="book" className="w-4 h-4" /> ThunderStudy
-          </a>
-          <a href="https://thundertest.indevs.in/" target="_blank" rel="noopener" className="hidden sm:flex items-center gap-1.5 bg-card border border-hairlinestrong rounded-pill px-4 py-2 text-[13px] font-semibold press">
-            <Icon name="news" className="w-4 h-4" /> ThunderTest
-          </a>
-          <button onClick={() => setDark(!dark)} aria-label="Toggle dark mode" className="w-10 h-10 rounded-pill border border-hairline bg-card flex items-center justify-center press">
-            <Icon name={dark ? "moon" : "sun"} className="w-4.5 h-4.5" />
-          </button>
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden w-10 h-10 rounded-pill border border-hairline bg-card flex items-center justify-center press">
-            <Icon name="menu" className="w-4.5 h-4.5" />
-          </button>
-        </div>
-      </div>
-      {menuOpen && (
-        <div className="lg:hidden absolute top-16 left-0 right-0 bg-surface border-b border-hairline px-6 py-4 flex flex-col gap-3 text-sm font-medium">
-          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#categories" onClick={() => setMenuOpen(false)}>Categories</a>
-          <a href="#popular" onClick={() => setMenuOpen(false)}>Popular</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <div className="flex items-center gap-2 pt-2 bg-card border border-hairline rounded-pill h-11 px-4">
-            <Icon name="search" className="w-4 h-4 text-muted" />
-            <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search PDFs..." className="flex-1 bg-transparent outline-none text-sm" />
-          </div>
-        </div>
-      )}
-    </header>
-  );
+function Cover({ b }) {
+  const exts = ['webp', 'png', 'jpg'];
+  const [step, setStep] = useState(0);
+  if (step >= exts.length) {
+    return <div className="cover-ph"><Icon name="book" /><span>{b.subject}</span></div>;
+  }
+  return <img src={'/img/' + b.slug + '.' + exts[step]} alt={b.title + ' book cover'} width="600" height="800" loading="lazy" decoding="async" onError={() => setStep(step + 1)} />;
 }
 
 function Hero() {
   return (
-    <section id="home" className="bg-canvas pt-14 pb-14">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
-        <div>
-          <div className="text-[13px] font-bold tracking-[1.5px] uppercase text-primary">Free PDF Library</div>
-          <h1 className="text-[34px] sm:text-[44px] lg:text-[56px] font-bold leading-[1.07] tracking-[-0.28px] mt-3 mb-4">
-            Your Study PDFs,<br /><span style={{ color: 'var(--primary)' }}>All in One Place</span>
-          </h1>
-          <p className="text-[19px] sm:text-[22px] font-normal leading-snug text-muted max-w-lg">
-            Free study material for ThunderStudy and ThunderTest — Boards Dominator, Boards Killer, Sample Papers, Question Banks and CUET books. No login, no cost.
-          </p>
-          <div className="flex flex-wrap gap-3.5 mt-7">
-            <a href="#latest" className="h-12 px-7 rounded-pill bg-primary text-onprimary text-[15px] font-semibold flex items-center press">Browse All PDFs</a>
-            <a href="#about" className="h-12 px-7 rounded-pill bg-canvas text-ink text-[15px] font-semibold border border-hairlinestrong flex items-center press">How It Works</a>
-          </div>
-          <div className="flex flex-wrap gap-7 mt-9">
-            {[["file","100% Free","Study without limits"],["shield","Safe & Secure","Trusted PDFs"],["bolt","Fast Access","Instant download"]].map(([ic,t,s]) => (
-              <div key={t} className="flex items-center gap-2.5">
-                <div className="w-9.5 h-9.5 rounded-pill flex items-center justify-center" style={{ background: 'var(--primary-soft)' }}>
-                  <Icon name={ic} className="w-4.5 h-4.5" stroke="#121212" />
-                </div>
-                <div><strong className="block text-sm font-semibold">{t}</strong><span className="text-[12.5px] text-muted">{s}</span></div>
-              </div>
-            ))}
-          </div>
+    <section className="hero" id="home">
+      <div className="blob blob-1"></div>
+      <div className="blob blob-2"></div>
+      <div className="wrap">
+        <span className="hero-badge"><span className="hero-dot"></span> Free PDF Library</span>
+        <h1>Your Study PDFs,<br /><span className="accent">All in One Place</span></h1>
+        <p className="hero-sub">Free study material for ThunderStudy and ThunderTest — Boards Dominator, Boards Killer, Sample Papers, Question Banks and CUET books. No login, no cost.</p>
+        <div className="hero-actions">
+          <a href="#latest" className="btn btn-primary btn-lg">Browse All PDFs</a>
+          <a href="/pdf.html" className="btn btn-secondary btn-lg"><Icon name="book" /> Open a PDF</a>
         </div>
-        <div className="relative flex items-center justify-center min-h-[260px] order-first lg:order-last">
-          <svg viewBox="0 0 460 300" className="w-full max-w-[440px] product-shadow">
-            {[["Maths","#8B1E2E",40],["Science","#C97A1F",76],["English","#1F5E3E",112],["History","#3D8BD9",148]].map(([t,c,y]) => (
-              <g key={t}><rect x="10" y={y} width="230" height="30" rx="6" fill={c}/><text x="24" y={y+20} fill="#fff" fontFamily="Inter" fontWeight="700" fontSize="15">{t}</text></g>
-            ))}
-            <rect x="10" y="184" width="230" height="30" rx="6" fill="var(--primary)" /><text x="24" y="204" fill="#fff" fontFamily="Inter" fontWeight="700" fontSize="15">Geography</text>
-            <rect x="220" y="30" width="230" height="200" rx="16" fill="#1B1B1F" />
-            <rect x="234" y="46" width="202" height="168" rx="4" fill="var(--canvas)" />
-            <rect x="248" y="80" width="120" height="16" rx="3" fill="var(--primary-soft)" />
-            <rect x="248" y="106" width="150" height="8" rx="3" fill="#C9D3E8" />
-            <rect x="248" y="120" width="150" height="8" rx="3" fill="#C9D3E8" />
-            <rect x="248" y="134" width="110" height="8" rx="3" fill="#C9D3E8" />
-          </svg>
+        <div className="chip-row hero-chips">
+          {[["file","100% Free"],["shield","Safe & Secure"],["bolt","Fast Access"]].map(([ic,t]) => (
+            <span key={t} className="chip"><Icon name={ic} />{t}</span>
+          ))}
+        </div>
+        <div className="hero-stats">
+          {[[BOOKS.length+"+","PDF Files"],[(CATS.length-1)+"","Categories"],["1M+","Downloads"],["Trusted","by Students"]].map(([n,l]) => (
+            <div key={l} className="card stat"><b>{n}</b><span>{l}</span></div>
+          ))}
         </div>
       </div>
     </section>
@@ -305,27 +721,27 @@ function Hero() {
 
 function Categories({ active, setActive, counts }) {
   return (
-    <section id="categories" className="bg-surface py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-baseline justify-between flex-wrap gap-4 mb-8">
-          <h2 className="text-2xl font-bold">Browse by Category</h2>
-          <a href="#latest" className="text-[13px] font-bold tracking-[1.2px] uppercase">View all &rsaquo;</a>
+    <section id="categories" className="sec sec-alt">
+      <div className="wrap">
+        <div className="sec-head">
+          <span className="sec-kicker">Browse</span>
+          <h2>Pick a <span className="accent">category</span></h2>
+          <p>Tap a subject to filter the library below.</p>
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-3.5">
+        <div className="cat-grid">
           {CATS.map(c => {
             const isActive = active === c.name;
-            const color = CAT_COLOR[c.name] || 'var(--primary)';
             return (
               <button
                 key={c.name}
-                onClick={() => setActive(c.name)}
-                className={"flex flex-col items-center gap-2.5 text-center bg-card border rounded-lg py-5 px-2 press " + (isActive ? "border-primary border-2" : "border-hairline")}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => { setActive(c.name); const l = document.getElementById('latest'); if (l) l.scrollIntoView({ behavior: 'smooth' }); }}
+                className={"cat-tile" + (isActive ? " active" : "")}
               >
-                <div className="w-11 h-11 rounded-md flex items-center justify-center" style={{ background: color }}>
-                  <Icon name={c.icon} className="w-5 h-5" stroke="#fff" />
-                </div>
-                <strong className="text-[13px] font-semibold">{c.name}</strong>
-                <span className="text-[11px] text-muted">{c.name === 'All PDFs' ? BOOKS.length + ' files' : (counts[c.name] || 0) + ' files'}</span>
+                <span className="cat-ico"><Icon name={c.icon} /></span>
+                <strong>{c.name}</strong>
+                <small>{(() => { const n = c.name === 'All PDFs' ? BOOKS.length : (counts[c.name] || 0); return n + (n === 1 ? ' file' : ' files'); })()}</small>
               </button>
             );
           })}
@@ -335,65 +751,59 @@ function Categories({ active, setActive, counts }) {
   );
 }
 
-function Banner() {
-  return (
-    <section className="bg-canvas py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="rounded-lg bg-surface border border-hairline p-8 flex items-center justify-between gap-6 flex-wrap">
-          <div className="flex items-center gap-4.5">
-            <div className="w-14 h-14 rounded-md flex items-center justify-center shrink-0" style={{ background: 'var(--primary-soft)' }}>
-              <Icon name="file" className="w-6 h-6" stroke="#121212" />
-            </div>
-            <div>
-              <strong className="block text-lg mb-1">Explore Every ThunderStudy PDF</strong>
-              <span className="text-sm text-muted">Boards Dominator, Boards Killer, Sample Papers, Question Banks and CUET books for your exam prep.</span>
-            </div>
-          </div>
-          <a href="#latest" className="h-12 px-7 rounded-pill bg-primary text-onprimary text-[15px] font-semibold flex items-center press whitespace-nowrap">Browse All PDFs &rsaquo;</a>
-        </div>
-        <div className="flex flex-wrap gap-10 justify-center mt-11">
-          {[["file",BOOKS.length+"+","PDF Files"],["grid",CATS.length-1+"","Subjects"],["dl","1M+","Downloads"],["shield","Trusted","by Students"]].map(([ic,n,l]) => (
-            <div key={l} className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-pill bg-card border border-hairline flex items-center justify-center text-primary"><Icon name={ic} className="w-4.5 h-4.5" /></div>
-              <div><strong className="block text-xl">{n}</strong><span className="text-[12.5px] text-muted">{l}</span></div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function PdfCard({ b }) {
-  const color = CAT_COLOR[b.cat] || '#334155';
   return (
-    <div className="bg-card border border-hairline rounded-lg p-5 flex flex-col">
-      <div className="aspect-[16/10] rounded-md overflow-hidden mb-3.5 bg-surfacedark">
-        <img src={b.img} alt={b.title} loading="lazy" className="w-full h-full object-cover" />
+    <article className="card pdf-card">
+      <a className="pdf-thumb" href={readerHref(b)} target="_blank" rel="noopener" aria-label={'Read ' + b.title} tabIndex="-1">
+        <Cover b={b} />
+        {b.ribbon && <span className="badge badge-primary pdf-ribbon">{b.ribbon}</span>}
+      </a>
+      <p className="pdf-subject">{b.subject}</p>
+      <h3>{b.title}</h3>
+      <p className="pdf-desc">{b.desc}</p>
+      <div className="pdf-price"><span className="badge badge-success">FREE</span>{b.was && <s>{b.was}</s>}</div>
+      <div className="pdf-actions">
+        <a href={readerHref(b)} target="_blank" rel="noopener" className="btn btn-primary btn-sm"><Icon name="read" /> Read</a>
+        <a href={b.pdf} onClick={onDownload(b)} download className="btn btn-outline btn-sm" aria-label={'Download ' + b.title + ' as PDF'}><Icon name="dl" /> Download</a>
       </div>
-      <span className="inline-block text-[11px] font-semibold px-2.5 py-1 rounded-pill mb-2 w-fit" style={{ background: color + '22', color }}>{b.cat} · {b.price}</span>
-      <h3 className="text-[16px] font-bold leading-snug mb-2 min-h-[42px]">{b.title}</h3>
-      <p className="text-[12.5px] text-muted mb-4 line-clamp-2">{b.sub}</p>
-      <div className="flex gap-2 mt-auto">
-        <a href={b.link} target="_blank" rel="noopener" className="flex-1 h-9.5 rounded-pill border border-hairlinestrong bg-canvas text-ink text-[13px] font-semibold flex items-center justify-center press">View</a>
-        <a href={b.link} target="_blank" rel="noopener" className="flex-1 h-9.5 rounded-pill bg-primary text-onprimary text-[13px] font-semibold flex items-center justify-center press">Download</a>
-      </div>
-    </div>
+    </article>
   );
 }
 
-function Latest({ books }) {
+function Latest({ books, query, setQuery, active, setActive }) {
   return (
-    <section id="latest" className="bg-surface py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-baseline justify-between flex-wrap gap-4 mb-8">
-          <h2 className="text-2xl font-bold flex items-center gap-2"><Icon name="file" className="w-5 h-5" /> Latest PDFs</h2>
-          <span className="text-[13px] text-muted">{books.length} result{books.length === 1 ? '' : 's'}</span>
+    <section id="latest" className="sec">
+      <div className="wrap">
+        <div className="sec-head">
+          <span className="sec-kicker">Library</span>
+          <h2>Latest <span className="accent">PDFs</span></h2>
+          <p>Search by subject, exam or series. Every file opens as a direct link.</p>
+        </div>
+        <div className="lib-tools">
+          <div className="input-wrap">
+            <Icon name="search" />
+            <input
+              className="text-input"
+              type="search"
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              placeholder="Search PDFs (e.g. Physics, CUET, Class 12...)"
+              aria-label="Search PDFs"
+            />
+          </div>
+          <span className="lib-count" role="status">{books.length} result{books.length === 1 ? '' : 's'}{active !== 'All PDFs' ? ' in ' + active : ''}</span>
+          {(active !== 'All PDFs' || query) && (
+            <button type="button" className="btn btn-soft btn-sm" onClick={() => { setActive('All PDFs'); setQuery(''); }}>Clear filters</button>
+          )}
         </div>
         {books.length === 0 ? (
-          <p className="text-muted">No PDFs match your search or category.</p>
+          <div className="ds-state">
+            <div className="ds-ico"><Icon name="search" /></div>
+            <h3>No PDFs found</h3>
+            <p>Nothing matches your search or category. Try a different word or clear the filters.</p>
+          </div>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="pdf-grid">
             {books.map((b,i) => <PdfCard key={b.title+i} b={b} />)}
           </div>
         )}
@@ -404,18 +814,20 @@ function Latest({ books }) {
 
 function Popular() {
   return (
-    <section id="popular" className="bg-canvas py-16 popular-books-section">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-baseline justify-between flex-wrap gap-4 mb-8">
-          <div><div className="text-[11px] font-bold tracking-[1.6px] uppercase text-muted mb-2">Pick up where you left off</div><h2 className="text-2xl font-bold flex items-center gap-2"><Icon name="trophy" className="w-5 h-5 text-primary" /> Popular PDFs</h2></div>
-          <a href="https://thundertest.indevs.in/books" target="_blank" rel="noopener" className="text-[13px] font-bold tracking-[1.2px] uppercase">View all &rsaquo;</a>
+    <section id="popular" className="sec sec-alt popular-books-section">
+      <div className="wrap">
+        <div className="sec-head">
+          <span className="sec-kicker">Pick up where you left off</span>
+          <h2>Popular <span className="accent">PDFs</span></h2>
+          <p>The books students open the most.</p>
         </div>
         <div className="popular-book-shelf">
-          {POPULAR.slice(0,5).map((b,i) => <a key={b.title+i} href={b.link} target="_blank" rel="noopener" className={`shelf-book shelf-book-${i+1} group`}>
-            <div className="book-object"><div className="book-pages"></div><div className="book-cover-face"><span className="book-cover-kicker">THUNDERSTUDY · {b.cat.toUpperCase()}</span><img src={b.img} alt={b.title} loading="lazy"/><div className="book-cover-shade"></div><strong>{b.title}</strong><small>{b.price} · Open book</small></div><div className="book-spine-label">{String(i+1).padStart(2,'0')}</div></div>
-            <div className="shelf-book-meta"><span>{b.cat} · {b.price}</span><strong>{b.title}</strong></div>
+          {POPULAR.slice(0,5).map((b,i) => <a key={b.slug} href={readerHref(b)} target="_blank" rel="noopener" className={`shelf-book shelf-book-${i+1}`}>
+            <div className="book-object"><div className="book-pages"></div><div className="book-cover-face"><Cover b={b} /></div><div className="book-spine-label">{String(i+1).padStart(2,'0')}</div></div>
+            <div className="shelf-book-meta"><span>{b.tabs[0]} · FREE</span><strong>{b.title}</strong></div>
           </a>)}
         </div>
+        <div className="sec-more"><a className="link-more" href="#latest">View all <Icon name="arrow" /></a></div>
       </div>
     </section>
   );
@@ -423,10 +835,19 @@ function Popular() {
 
 function PdfShowcase() {
   return (
-    <section id="pdf-reader-showcase" className="pdf-showcase py-16">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
-        <div><div className="text-[11px] font-bold tracking-[1.6px] uppercase text-primary mb-3">Read it like a book</div><h2 className="text-[32px] sm:text-[42px] font-bold leading-tight mb-4">Open any PDF in the ThunderStudy reader.</h2><p className="text-muted text-[16px] leading-relaxed max-w-xl mb-6">Upload a file or paste a direct PDF link. The reader keeps your document full-size, adds page-turn animation, and works on desktop and mobile.</p><a href="/pdf.html" className="inline-flex items-center gap-2 h-11 px-5 rounded-pill bg-primary text-onprimary text-sm font-semibold press">Open the PDF reader <Icon name="arrow-right" className="w-4 h-4" /></a></div>
-        <a href="/pdf.html" className="pdf-showcase-visual" aria-label="Open the PDF reader"><div className="showcase-page showcase-page-back"></div><div className="showcase-page showcase-page-front"><div className="showcase-bar"></div><span>THUNDERSTUDY<br/><b>PDF READER</b></span><small>Upload · Link · Read</small></div><div className="showcase-cursor"><Icon name="arrow-up-right" className="w-4 h-4" /></div></a>
+    <section id="pdf-reader-showcase" className="sec">
+      <div className="wrap showcase-grid">
+        <div className="showcase-copy">
+          <span className="sec-kicker">Read it like a book</span>
+          <h2>Open any PDF in the ThunderStudy reader.</h2>
+          <p>Upload a file or paste a direct PDF link. The reader keeps your document full-size, adds page-turn animation, and works on desktop and mobile.</p>
+          <a href="/pdf.html" className="btn btn-primary">Open the PDF reader <Icon name="arrow" /></a>
+        </div>
+        <a href="/pdf.html" className="pdf-showcase-visual" aria-label="Open the PDF reader">
+          <div className="showcase-page showcase-page-back"></div>
+          <div className="showcase-page showcase-page-front"><div className="showcase-bar"></div><span>THUNDERSTUDY<br/><b>PDF READER</b></span><small>Upload · Link · Read</small></div>
+          <div className="showcase-cursor"><Icon name="upright" /></div>
+        </a>
       </div>
     </section>
   );
@@ -436,41 +857,36 @@ function QuickLinks() {
   const items = [
     ["book","For ThunderStudy","Study material and notes to learn better.","Visit ThunderStudy","https://thunderstudy.indevs.in/"],
     ["news","For ThunderTest","Previous year papers and practice resources.","Visit ThunderTest","https://thundertest.indevs.in/"],
-    ["globe","Design System","Built with the ThunderStudy Design System.","View Design System","#"],
-    ["shield","Made for Students","Free, simple and focused on your success.","Learn More","https://wondermayank.in/"]
+    ["file","Open any PDF","Upload a file or paste a link and read it as a flipbook.","Open the reader","/pdf.html"],
+    ["shield","Made for Students","Free, simple and focused on your success.","Learn more","https://wondermayank.in/"]
   ];
   return (
-    <section id="about" className="bg-surface py-16">
-      <div className="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {items.map(([ic,t,d,l,href]) => (
-          <div key={t} className="flex gap-3.5 items-start">
-            <div className="w-10.5 h-10.5 rounded-pill bg-card border border-hairline flex items-center justify-center text-primary shrink-0"><Icon name={ic} className="w-4.5 h-4.5" /></div>
-            <div>
-              <strong className="block text-[15px] mb-1">{t}</strong>
-              <p className="text-[13.5px] text-muted mb-2">{d}</p>
-              <a href={href} target="_blank" rel="noopener" className="text-[12px] font-bold uppercase tracking-[1px]">{l} &rsaquo;</a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function CTA() {
-  return (
-    <section className="py-16 text-center" style={{ background: 'var(--surface-dark)' }}>
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="text-[13px] font-bold tracking-[1.5px] uppercase" style={{ color: 'var(--secondary)' }}>Never Miss a File</div>
-        <h2 className="text-[28px] sm:text-[32px] font-bold my-4" style={{ color: 'var(--on-dark)' }}>New PDFs added every week — bookmark the library</h2>
-        <a href="#latest" className="inline-flex h-12 px-7 rounded-pill border items-center text-[15px] font-semibold press" style={{ color: 'var(--on-dark)', borderColor: 'var(--on-dark)' }}>Browse All PDFs</a>
+    <section id="about" className="sec sec-alt">
+      <div className="wrap">
+        <div className="sec-head">
+          <span className="sec-kicker">Thunder</span>
+          <h2>More from <span className="accent">Thunder</span></h2>
+          <p>Everything for your exam prep, built by the same team.</p>
+        </div>
+        <div className="grid-4">
+          {items.map(([ic,t,d,l,href]) => {
+            const ext = href.indexOf('http') === 0;
+            return (
+              <div key={t} className="card">
+                <div className="card-ico"><Icon name={ic} /></div>
+                <h3>{t}</h3>
+                <p>{d}</p>
+                <a href={href} {...(ext ? { target: '_blank', rel: 'noopener' } : {})} className="link-more">{l} <Icon name="arrow" /></a>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
 }
 
 function FAQ() {
-  const [open, setOpen] = useState(0);
   const faqs = [
     ["Is ThunderStudy PDF really free?","Most PDFs — Boards Dominator, Boards Killer, Sample Papers, Question Banks and GK MindMaster — are 100% free. A few CUET domain books are priced at ₹99."],
     ["Which subjects does ThunderStudy PDF cover?","CBSE Class 12 Science, Commerce and Humanities, Economics, Question Banks and CUET domain subjects, plus General Knowledge for all competitive exams."],
@@ -478,117 +894,87 @@ function FAQ() {
     ["Do I need an account to download a PDF?","No account is required — every file opens as a direct link, either a PDF download or a Drive folder."]
   ];
   return (
-    <section className="bg-surface py-16">
-      <div className="max-w-2xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-2">Frequently Asked Questions</h2>
-        <p className="text-muted font-light mb-5">Quick answers about ThunderStudy PDF.</p>
-        {faqs.map(([q,a],i) => (
-          <div key={q} className="border-b border-hairline">
-            <button onClick={() => setOpen(open === i ? -1 : i)} className="w-full flex justify-between items-center py-5 text-left font-semibold text-[16px]">
-              {q}
-              <Icon name="chev" className={"w-4 h-4 shrink-0 transition-transform " + (open === i ? "rotate-180" : "")} />
-            </button>
-            {open === i && <p className="text-[15px] text-muted leading-relaxed pb-5 -mt-2">{a}</p>}
-          </div>
-        ))}
+    <section id="faq" className="sec">
+      <div className="wrap">
+        <div className="sec-head">
+          <span className="sec-kicker">FAQ</span>
+          <h2>Frequently asked <span className="accent">questions</span></h2>
+          <p>Quick answers about ThunderStudy PDF.</p>
+        </div>
+        <div className="faq-list">
+          {faqs.map(([q,a],i) => (
+            <details key={q} className="faq-item" open={i === 0}>
+              <summary>{q}<span className="faq-chev"><Icon name="chev" /></span></summary>
+              <p>{a}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
-function Footer() {
+function CTA() {
   return (
-    <footer className="bg-surface border-t border-hairline pt-16 pb-7">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <img src="/favicon.svg?v=2" alt="ThunderStudy PDF" className="w-7.5 h-7.5 rounded-md" />
-              <strong>ThunderStudy PDF</strong>
-            </div>
-            <p className="text-sm text-muted max-w-xs">The free PDF library behind ThunderStudy and ThunderTest — Boards Dominator, Boards Killer, Sample Papers, Question Banks and CUET books.</p>
-          </div>
-          <div>
-            <h4 className="text-[13px] tracking-[1px] uppercase mb-4">Thunder</h4>
-            <a href="https://thunderstudy.indevs.in/" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">ThunderStudy</a>
-            <a href="https://thundertest.indevs.in/dashboard" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">CBT Mock Platform</a>
-            <a href="https://blog.thunderstudy.indevs.in" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">Free Study Material</a>
-            <a href="https://thundertest.indevs.in/help" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">Help / Donate</a>
-          </div>
-          <div>
-            <h4 className="text-[13px] tracking-[1px] uppercase mb-4">wondermayank</h4>
-            <a href="https://wondermayank.in/mail" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">Mail</a>
-            <a href="https://wondermayank.in/contact" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">Contact</a>
-          </div>
-          <div>
-            <h4 className="text-[13px] tracking-[1px] uppercase mb-4">Legal</h4>
-            <a href="https://wondermayank.in/terms" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">Terms</a>
-            <a href="https://wondermayank.in/privacy" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">Privacy</a>
-            <a href="https://wondermayank.in/disclaimer" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">Disclaimer</a>
-            <a href="https://wondermayank.in/fqa" target="_blank" rel="noopener" className="block text-sm text-muted py-1.5 hover:text-primary">FAQ</a>
-          </div>
-        </div>
-        <div className="mt-12 pt-6 border-t border-hairline flex flex-wrap justify-between gap-2 text-xs text-muted">
-          <span>© 2025 Thunder · by wondermayank</span>
-          <span>Made for students across India</span>
+    <section className="sec sec-alt">
+      <div className="wrap">
+        <div className="cta-band">
+          <h2>New PDFs added every week — bookmark the library</h2>
+          <p>Never miss a file. Boards, sample papers, question banks and CUET books, free for every student.</p>
+          <a className="btn btn-lg" href="#latest">Browse All PDFs</a>
         </div>
       </div>
-    </footer>
+    </section>
   );
 }
 
 function App() {
-  const [dark, setDark] = useState(() => {
-    try { return localStorage.getItem('theme') === 'dark'; } catch(e) { return false; }
-  });
   const [active, setActive] = useState('All PDFs');
-  const [query, setQuery] = useState('');
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark);
-    try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch(e) {}
-  }, [dark]);
+  const [query, setQuery] = useState(() => {
+    try { return new URLSearchParams(location.search).get('q') || ''; } catch (e) { return ''; }
+  });
 
   const counts = useMemo(() => {
     const c = {};
-    BOOKS.forEach(b => { c[b.cat] = (c[b.cat] || 0) + 1; });
+    BOOKS.forEach(b => b.tabs.forEach(t => { c[t] = (c[t] || 0) + 1; }));
     return c;
   }, []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return BOOKS.filter(b => {
-      const inCat = active === 'All PDFs' || b.cat === active;
-      const inQuery = !q || b.title.toLowerCase().includes(q) || b.sub.toLowerCase().includes(q) || b.cat.toLowerCase().includes(q);
+      const inCat = active === 'All PDFs' || b.tabs.indexOf(active) !== -1;
+      const inQuery = !q || (b.title + ' ' + b.subject + ' ' + b.desc + ' ' + b.tabs.join(' ')).toLowerCase().includes(q);
       return inCat && inQuery;
     });
   }, [active, query]);
 
+  /* sections now exist: let the sidebar and dock watch them */
+  useEffect(() => {
+    if (window.ThunderUI) window.ThunderUI.refresh();
+    if (location.hash) {
+      const el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView();
+    }
+  }, []);
+
   return (
     <React.Fragment>
-      <Header query={query} setQuery={setQuery} dark={dark} setDark={setDark} />
-      <main>
-        <Hero />
-        <Categories active={active} setActive={setActive} counts={counts} />
-        <Banner />
-        <Latest books={filtered} />
-        <Popular />
-        <QuickLinks />
-        <CTA />
-        <PdfShowcase />
-        <FAQ />
-      </main>
-      <Footer />
+      <Hero />
+      <Categories active={active} setActive={setActive} counts={counts} />
+      <Latest books={filtered} query={query} setQuery={setQuery} active={active} setActive={setActive} />
+      <Popular />
+      <PdfShowcase />
+      <QuickLinks />
+      <FAQ />
+      <CTA />
     </React.Fragment>
   );
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 </script>
-
-<script>
-  window.addEventListener('load', function(){ document.getElementById('loader').classList.add('hide'); });
-  setTimeout(function(){ document.getElementById('loader').classList.add('hide'); }, 1500);
-</script>
+<script src="/thunder-ui.js"></script>
+<script src="/js/pdf-tools.js"></script>
 </body>
 </html>
