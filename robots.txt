@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Allow: /pdf
-Allow: /reader
-Allow: /assets/
-Sitemap: https://thunderstudypdf.indevs.in/sitemap.xml
