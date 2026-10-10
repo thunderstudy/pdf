@@ -517,8 +517,11 @@ html.theme-swap *{transition:none!important}
 .link-row{display:flex;gap:14px;align-items:center}
 .link-row .input-wrap{flex:1;min-width:0}
 @media(max-width:640px){.link-row{flex-wrap:wrap}.link-row .btn{flex:1 1 100%}}
+<<<<<<< HEAD
 .try-row{display:flex;align-items:center;justify-content:center;gap:12px 16px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--hairline)}
 .try-text{font-size:13.5px;color:var(--muted);font-weight:600}
+=======
+>>>>>>> b82b594e37cd2b4eac854a08916529999a0cd701
 .start-foot{display:flex;justify-content:center;margin-top:26px}
 .pdf-section{padding-bottom:60px}
 
@@ -551,7 +554,11 @@ html.theme-swap *{transition:none!important}
 <div class="wrap">
 <span class="hero-badge"><span class="hero-dot"></span> Open your next chapter</span>
 <h1>Bring a PDF<br><span class="accent">to life.</span></h1>
+<<<<<<< HEAD
 <p class="hero-sub">Upload a file from your device or paste a PDF or Google Drive link. We'll turn it into a full-size two-page flipbook.</p>
+=======
+<p class="hero-sub">Upload a file from your device or paste a direct PDF link. We'll turn it into a full-size two-page flipbook.</p>
+>>>>>>> b82b594e37cd2b4eac854a08916529999a0cd701
 <section class="panel pdf-panel" aria-label="Open a PDF">
 <label class="file-drop" for="pdf-file" id="drop">
 <span class="fd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
@@ -563,6 +570,7 @@ html.theme-swap *{transition:none!important}
 </label>
 <div class="or-divider">or</div>
 <form id="link-form" class="url-form" novalidate>
+<<<<<<< HEAD
 <label class="field-label" for="pdf-link">Paste a PDF or Google Drive link</label>
 <div class="link-row">
 <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><input id="pdf-link" class="text-input shadowed" type="url" placeholder="Paste a PDF or Google Drive link" autocomplete="url"></div>
@@ -574,6 +582,15 @@ html.theme-swap *{transition:none!important}
 <span class="try-text">No PDF handy? See how the reader feels.</span>
 <a class="btn btn-soft btn-sm" id="try-pdf" href="/reader?link=%2Fassets%2Fsample.pdf&amp;title=The%20Complete%20Static%20GK%20Capsule" aria-label="Try a sample PDF in the reader"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Try a sample PDF</a>
 </div>
+=======
+<label class="field-label" for="pdf-link">Paste a PDF link</label>
+<div class="link-row">
+<div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><input id="pdf-link" class="text-input shadowed" type="url" placeholder="https://example.com/book.pdf" autocomplete="url"></div>
+<button class="btn btn-primary" type="submit" aria-label="Open PDF">Open PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+</div>
+</form>
+<p class="hint" id="start-hint" role="status">Your document stays in this browser tab while you read.</p>
+>>>>>>> b82b594e37cd2b4eac854a08916529999a0cd701
 </section>
 <div class="start-foot"><a class="btn btn-outline" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg> Back to library</a></div>
 </div>
@@ -746,7 +763,10 @@ html.theme-swap *{transition:none!important}
 })();
 </script>
 <script type="module">
+<<<<<<< HEAD
 import{normalizePdfUrl,isDriveLink,isDriveFolder}from'/js/pdf-link.js';
+=======
+>>>>>>> b82b594e37cd2b4eac854a08916529999a0cd701
 const file=document.querySelector('#pdf-file'),form=document.querySelector('#link-form'),link=document.querySelector('#pdf-link'),hint=document.querySelector('#start-hint'),drop=document.querySelector('#drop');
 const dbRequest=indexedDB.open('thunderstudy-reader',1);dbRequest.onupgradeneeded=()=>dbRequest.result.createObjectStore('documents');
 function putFile(blob,title){return new Promise((resolve,reject)=>{const request=indexedDB.open('thunderstudy-reader',1);request.onsuccess=()=>{const tx=request.result.transaction('documents','readwrite');tx.objectStore('documents').put({blob,title},'active');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)}})}
@@ -757,8 +777,13 @@ file.addEventListener('change',e=>handleFile(e.target.files[0]));
 ['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('dragover')}));
 ['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('dragover')}));
 drop.addEventListener('drop',e=>handleFile(e.dataTransfer&&e.dataTransfer.files[0]));
+<<<<<<< HEAD
 form.addEventListener('submit',event=>{event.preventDefault();let url;try{url=new URL(link.value.trim());if(!/^https?:$/.test(url.protocol))throw new Error()}catch{setHint('Enter a valid PDF or Google Drive URL, including https://','err');link.focus();return}if(isDriveFolder(url.href)){setHint('That is a Drive folder. Open the PDF file and paste its share link instead.','err');link.focus();return}const drive=isDriveLink(url.href);if(drive&&normalizePdfUrl(url.href)===url.href){setHint('Could not read a file ID from that Drive link. Copy the share link of the PDF file.','err');link.focus();return}const title=drive?'Google Drive PDF':'Linked PDF';sessionStorage.setItem('ts-pdf-source',url.href);sessionStorage.setItem('ts-pdf-title',title);openReader(url.href,title)});
 const params=new URLSearchParams(location.search);if(params.get('link'))openReader(params.get('link'),params.get('title')||(isDriveLink(params.get('link'))?'Google Drive PDF':'Linked PDF'));
+=======
+form.addEventListener('submit',event=>{event.preventDefault();try{const url=new URL(link.value.trim());if(!/^https?:$/.test(url.protocol))throw new Error();sessionStorage.setItem('ts-pdf-source',url.href);sessionStorage.setItem('ts-pdf-title','Linked PDF');openReader(url.href,'Linked PDF')}catch{setHint('Enter a valid PDF URL, including https://','err');link.focus()}});
+const params=new URLSearchParams(location.search);if(params.get('link'))openReader(params.get('link'),params.get('title')||'Linked PDF');
+>>>>>>> b82b594e37cd2b4eac854a08916529999a0cd701
 </script>
 </body>
 </html>

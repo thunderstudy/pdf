@@ -541,12 +541,21 @@ body.reader-page{padding-bottom:0;min-height:100%;overflow:hidden;background:var
 a.theme-btn,button.theme-btn{display:flex}
 .reader-actions .theme-btn svg{position:static;margin:0;width:18px;height:18px;transition:none}
 .reader-actions .theme-btn:hover{color:var(--primary)}
+<<<<<<< HEAD
 .dearflip-stage{position:fixed;top:77px;left:0;right:0;bottom:0;box-sizing:border-box;padding:12px;background:var(--canvas-deep);overflow:hidden}
 .dearflip-book{position:absolute!important;top:12px;left:12px;right:12px;bottom:12px;width:auto!important;height:auto!important;min-height:0!important;border-radius:var(--radius-lg);overflow:hidden}
 .dearflip-loading{position:absolute;inset:12px;z-index:5;display:flex;align-items:center;justify-content:center;gap:14px;border-radius:var(--radius-lg);background:var(--surface);box-shadow:var(--e-md);color:var(--ink);font-weight:700}
 .dearflip-loading .error-message{text-align:center;line-height:1.6;color:var(--body-c);font-weight:600;padding:24px}
 .dearflip-loading .error-message a{color:var(--primary);font-weight:700}
 @media(max-width:640px){.reader-nav .brand-text{display:none}.dearflip-stage{top:69px;padding:8px}.dearflip-book{top:8px!important;left:8px!important;right:8px!important;bottom:8px!important}.dearflip-loading{inset:8px}}
+=======
+.dearflip-stage{position:relative;height:calc(100% - 77px);min-height:320px;padding:12px;background:var(--canvas-deep)}
+.dearflip-book{width:100%;height:100%;border-radius:var(--radius-lg);overflow:hidden}
+.dearflip-loading{position:absolute;inset:12px;z-index:5;display:flex;align-items:center;justify-content:center;gap:14px;border-radius:var(--radius-lg);background:var(--surface);box-shadow:var(--e-md);color:var(--ink);font-weight:700}
+.dearflip-loading .error-message{text-align:center;line-height:1.6;color:var(--body-c);font-weight:600;padding:24px}
+.dearflip-loading .error-message a{color:var(--primary);font-weight:700}
+@media(max-width:640px){.reader-nav .brand-text{display:none}.dearflip-stage{height:calc(100% - 69px);padding:8px}.dearflip-loading{inset:8px}}
+>>>>>>> b82b594e37cd2b4eac854a08916529999a0cd701
 
 </style>
 </head>
