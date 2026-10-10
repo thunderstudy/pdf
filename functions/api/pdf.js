@@ -36,7 +36,7 @@ export async function onRequest({ request }) {
 
     const contentType = upstream.headers.get('content-type') || '';
     if (contentType.includes('text/html')) {
-      return new Response('The link returned a webpage, not a PDF file. For Google Drive, set sharing to "Anyone with the link".', {
+      return new Response('The link returned a webpage, not a PDF file.', {
         status: 415,
         headers: cors
       });
@@ -45,20 +45,7 @@ export async function onRequest({ request }) {
     const headers = new Headers(cors);
     headers.set('Content-Type', 'application/pdf');
     headers.set('Cache-Control', 'public, max-age=3600');
-    const name = (requestUrl.searchParams.get('name') || '').replace(/[\r\n"\\]+/g, ' ').trim();
-    const kind = requestUrl.searchParams.get('download') === '1' ? 'attachment' : 'inline';
-    if (name) {
-      const ascii = name.replace(/[^\x20-\x7e]+/g, '_');
-      headers.set('Content-Disposition', `${kind}; filename="${ascii}"; filename*=UTF-8''${encodeURIComponent(name)}`);
-    } else {
-      headers.set('Content-Disposition', kind);
-    }
-    const up = upstream.headers.get('content-disposition') || '';
-    const m = up.match(/filename\*=UTF-8''([^;]+)/i) || up.match(/filename="?([^";]+)"?/i);
-    if (m) { try { headers.set('X-Pdf-Name', encodeURIComponent(decodeURIComponent(m[1]).replace(/\.pdf$/i, ''))); } catch {} }
-    headers.set('Access-Control-Expose-Headers', 'Content-Disposition, Content-Length, X-Pdf-Name');
-    const len = upstream.headers.get('content-length');
-    if (len && !upstream.headers.get('content-encoding')) headers.set('Content-Length', len);
+    headers.set('Content-Disposition', 'inline');
     return new Response(upstream.body, { status: 200, headers });
   } catch {
     return new Response('Unable to access the PDF host.', { status: 502, headers: cors });
